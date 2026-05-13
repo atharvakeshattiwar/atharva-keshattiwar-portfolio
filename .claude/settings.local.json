@@ -100,7 +100,18 @@
       "Bash(node -e ' *)",
       "Bash(mkdir -p /tmp/responsive-audit-v2)",
       "Bash(mkdir -p /tmp/responsive-audit-v3)",
-      "Bash(npm run *)"
+      "Bash(npm run *)",
+      "Bash(git commit -m ' *)",
+      "Bash(gh repo *)",
+      "Bash(npm list *)",
+      "Bash(vercel --yes --prod)",
+      "Bash(grep *)",
+      "Bash(curl *)",
+      "Bash('.next-project .primary-button-block-black')",
+      "WebFetch(domain:silken-zenobia-635.notion.site)",
+      "WebFetch(domain:monof-template.webflow.io)",
+      "Bash(lsof -ti:5178)",
+      "Bash(git add *)"
     ]
   },
   "enableAllProjectMcpServers": true,

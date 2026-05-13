@@ -75,7 +75,7 @@ export default function ThomasHero() {
           </div>
 
           <p ref={paraRef} className="th-paragraph animate-fade-in">
-            A product designer with 4+ years of experience, crafting AI-driven digital products and capturing human emotion through design and my lens.
+            Product designer with 4+ years of experience crafting scalable digital products, AI-powered experiences, and human-centered stories through design, systems, and visual storytelling.
           </p>
         </div>
       </div>

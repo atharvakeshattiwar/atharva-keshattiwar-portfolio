@@ -1,10 +1,10 @@
 import { useEffect, useRef } from 'react'
 
 const results = [
-  { number: '20+', label: 'Projects Delivered' },
-  { number: '1M+', label: 'Users Impacted' },
-  { number: '20+', label: 'Products Scaled' },
-  { number: '4+', label: 'Years of Experience' },
+  { number: '4+', label: 'Years of Experience', description: 'Designing across SaaS, AI, and commerce products with a focus on building intuitive and scalable digital experiences.' },
+  { number: '20+', label: 'Projects Delivered', description: 'Delivered product solutions across B2B platforms, marketplaces, and consumer applications with real-world usability and impact.' },
+  { number: '5+', label: 'Domains Explored', description: 'Worked across AI, SaaS, e-commerce, healthtech, and retailtech with adaptable design thinking across industries and user needs.' },
+  { number: '100M+', label: 'User Reach', description: 'Experiences designed across E-commerce, SaaS, AI, CRM Re-commerce, and omnichannel digital platforms.' },
 ]
 
 export default function Results() {
@@ -24,14 +24,22 @@ export default function Results() {
   return (
     <section className="res-section">
       <div className="res-wrapper">
-        <div ref={headRef} className="section-headline-text text-align-center animate-fade-in">
-          Results
+        <div ref={headRef} className="res-header animate-fade-in">
+          <div className="section-headline-text text-align-center">
+            Results
+          </div>
+          <div className="res-subtext">
+            Designing scalable digital experiences across AI, commerce, SaaS, and omnichannel ecosystems — focused on building products that create real user and business impact.
+          </div>
         </div>
         <div ref={blocksRef} className="res-content animate-fade-in">
           {results.map((r) => (
             <div key={r.label} className="res-block">
               <div className="res-number">{r.number}</div>
-              <div className="res-label">{r.label}</div>
+              <div className="res-bottom">
+                <div className="res-label">{r.label}</div>
+                <div className="res-desc">{r.description}</div>
+              </div>
             </div>
           ))}
         </div>

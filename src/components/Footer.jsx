@@ -19,7 +19,7 @@ const pageLinks = [
   { label: 'About', href: '/about-me' },
   { label: 'Projects', href: '/projects' },
   { label: 'Contact', href: '/contact' },
-  { label: 'Resume', href: '#' },
+  { label: 'Resume', href: 'https://drive.google.com/file/d/1q2Fn4HGPszB5TwOBaOGyXFIB2nctWThT/view?usp=sharing' },
 ]
 
 function FooterLink({ label, href }) {
@@ -57,11 +57,17 @@ function FooterLinkColumn({ title, links }) {
   )
 }
 
+const socialLinks = [
+  'https://www.linkedin.com/in/atharva-keshattiwar-7940231b6/',
+  'https://www.instagram.com/atharva__ak10',
+  'https://x.com/Atharva_ak10',
+]
+
 function SocialIcons({ className }) {
   return (
     <div className={`footer-social-icons ${className}`}>
       {socialIcons.map((icon, i) => (
-        <a key={i} href="#" className="footer-social-icon-link">
+        <a key={i} href={socialLinks[i]} target="_blank" rel="noopener noreferrer" className="footer-social-icon-link">
           <div className="footer-social-icon">{icon}</div>
         </a>
       ))}
@@ -116,11 +122,11 @@ export default function Footer() {
               <div className="footer-left">
                 <div className="footer-call">
                   <div className="text-2xl text-weight-semibold text-color-black-900">
-                    Have any project idea in your mind!
+                    Have an Idea Worth Building?
                   </div>
-                  <a href="#" className="primary-button-block-black">
+                  <a href="mailto:atharvakeshattiwar@gmail.com" target="_blank" rel="noopener noreferrer" className="primary-button-block-black">
                     <div className="primary-button-wrapper-black">
-                      <div className="primary-button-text-black">Book a free strategy call</div>
+                      <div className="primary-button-text-black">Start a Conversation</div>
                       <div className="primary-button-arrow-block-black">
                         <div className="primary-button-slider-black">
                           <div className="button-arrow-white"><ArrowIcon /></div>
@@ -133,7 +139,7 @@ export default function Footer() {
                 <SocialIcons className="pc" />
               </div>
               <div className="footer-right">
-                <a href="mailto:atharvakeshattiwar@gmail.com" className="footer-headline-link">
+                <a href="mailto:atharvakeshattiwar@gmail.com" target="_blank" rel="noopener noreferrer" className="footer-headline-link">
                   <div className="section-headline-text">atharvakeshattiwar @gmail.com<img src={footerArrow} alt="" className="footer-arrow-inline" /></div>
                 </a>
                 <div className="footer-links-grid">
@@ -146,13 +152,13 @@ export default function Footer() {
             </div>
             <div ref={bottomRef} className="footer-bottom animate-fade-in">
               <div className="text-sm text-color-black-700">
-                Product Designer & Visual Storyteller
+                Product designer & visual storyteller
               </div>
               <div className="text-sm text-color-black-700">
                 © 2026 Atharva Keshattiwar
               </div>
               <div className="text-sm text-color-black-700">
-                Brewed with coffee & vibe coding ☕⚡
+                Designed with curiosity and good coffee ✨
               </div>
             </div>
           </div>

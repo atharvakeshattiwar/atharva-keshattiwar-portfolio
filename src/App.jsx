@@ -8,6 +8,7 @@ import About from './pages/About'
 import Projects from './pages/Projects'
 import Contact from './pages/Contact'
 import ProjectDetail from './pages/ProjectDetail'
+import HeroTest from './pages/HeroTest'
 
 function App() {
   const [loading, setLoading] = useState(true)
@@ -24,6 +25,7 @@ function App() {
         <Route path="/projects" element={<Projects />} />
         <Route path="/contact" element={<Contact />} />
         <Route path="/project/:slug" element={<ProjectDetail />} />
+        <Route path="/hero-test" element={<HeroTest />} />
       </Routes>
     </div>
     </>

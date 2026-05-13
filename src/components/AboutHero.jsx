@@ -2,10 +2,10 @@ import { useEffect, useRef } from 'react'
 import portrait from '../assets/thomas-hero.png'
 
 const stats = [
-  { value: '4+', label: 'Years of experience' },
-  { value: '30+', label: 'Projects completed' },
-  { value: '98%', label: 'Satisfied clients' },
-  { value: '8+', label: 'Industries served' },
+  { value: '4+', label: 'Years of Experience' },
+  { value: '30+', label: 'Projects Completed' },
+  { value: '98%', label: 'Satisfied Clients' },
+  { value: '8+', label: 'Industries Served' },
 ]
 
 export default function AboutHero() {
@@ -39,8 +39,8 @@ export default function AboutHero() {
             </div>
             <div className="ah-hr-line ah-animate"></div>
             <div className="ah-info ah-animate">
-              <div className="ah-info-text">I am a senior product designer</div>
-              <div className="ah-info-text">Currently brewing innovation @Fynd ☕</div>
+              <div className="ah-info-text">I am a Sr. Product Designer</div>
+              <div className="ah-info-text">Currently brewing innovation at Fynd ☕</div>
             </div>
             {/* <div className="ah-intro ah-animate">
               <h3 className="ah-intro-heading">

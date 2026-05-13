@@ -3,7 +3,7 @@ import { useEffect, useRef } from 'react'
 const stats = [
   { number: '4+', label: 'Years of Experience', desc: 'Designing across SaaS, AI, and commerce products with a focus on building intuitive and scalable digital experiences.' },
   { number: '20+', label: 'Projects Delivered', desc: 'Delivered product solutions across B2B platforms, marketplaces, and consumer applications with real-world usability and impact.' },
-  { number: '5+', label: 'Domains Worked', desc: 'AI, SaaS, E-commerce, HealthTech, and RetailTech with adaptable design thinking across industries and user needs.' },
+  { number: '5+', label: 'Domains Explored', desc: 'Worked across AI, SaaS, e-commerce, healthtech, and retailtech with adaptable design thinking across industries and user needs.' },
   { number: 'End-to-End', label: 'Product Ownership', desc: 'From problem discovery to shipped product, working across design, AI workflows, and frontend implementation.' },
 ]
 
@@ -44,7 +44,7 @@ export default function SuccessNumbers() {
     <section className="sin-section">
       <div className="sin-wrapper">
         <div ref={headlineRef} className="sin-heading animate-fade-in">
-          My impact in numbers
+          My Impact in Numbers
         </div>
         <div ref={gridRef} className="sin-grid animate-fade-in">
           {/* Row 1: Card, Card, Video (2col) */}
@@ -60,13 +60,13 @@ export default function SuccessNumbers() {
           <div className="sin-connect-block">
             <div>
               <div className="sin-connect-title">
-                Let's build something<br />meaningful.
+                Let's Build Meaningful<br />Experiences.
               </div>
               <p className="sin-connect-desc">
                 Open to collaborations, product challenges, and building impactful digital experiences using design, AI, and vibe coding.
               </p>
             </div>
-            <a href="#" className="sin-connect-btn">
+            <a href="mailto:atharvakeshattiwar@gmail.com" target="_blank" rel="noopener noreferrer" className="sin-connect-btn">
               <span className="sin-connect-btn-text">Contact Now</span>
               <span className="sin-connect-btn-arrow">
                 <svg width="16" height="16" viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg">

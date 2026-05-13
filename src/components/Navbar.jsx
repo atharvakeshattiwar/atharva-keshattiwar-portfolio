@@ -33,7 +33,7 @@ function ArrowIcon() {
 
 function ContactButton() {
   return (
-    <a href="#" target="_blank" rel="noopener noreferrer" className="primary-button-block-black">
+    <a href="https://drive.google.com/file/d/1q2Fn4HGPszB5TwOBaOGyXFIB2nctWThT/view?usp=sharing" target="_blank" rel="noopener noreferrer" className="primary-button-block-black">
       <div className="primary-button-wrapper-black">
         <div className="primary-button-text-black">Resume</div>
         <div className="primary-button-arrow-block-black">

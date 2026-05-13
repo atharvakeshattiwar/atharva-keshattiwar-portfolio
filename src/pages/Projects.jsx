@@ -1,23 +1,23 @@
 import { useEffect, useRef } from 'react'
 import { Link } from 'react-router-dom'
-import img1 from '../assets/works/designova.avif'
-import img2 from '../assets/works/brandflux.avif'
-import img3 from '../assets/works/creativox.avif'
-import img4 from '../assets/works/webion.avif'
+import img1 from '../assets/works/pizza-hut-mockup.png'
+import img2 from '../assets/works/novus-mockup.png'
+import img3 from '../assets/works/swapeasy-mockup.png'
+import img4 from '../assets/works/drpashu-mockup.png'
 import img5 from '../assets/works/monvera.avif'
 import img6 from '../assets/works/graphora.png'
 import Footer from '../components/Footer'
 
 const projects = [
-  { title: 'Pizza Hut Malaysia', image: img1, tags: ['FoodTech', 'Ordering Experience', 'E-commerce'], slug: 'pizza-hut-malaysia' },
-  { title: 'Novus Design System', image: img2, tags: ['Design System', 'Scalable UX', 'Infrastructure'], slug: 'novus-design-system' },
+  { title: 'Pizza Hut Malaysia', image: img1, tags: ['Foodtech', 'Ordering', 'Commerce'], slug: 'pizza-hut-malaysia' },
+  { title: 'Novus Design System', image: img2, tags: ['Design System', 'Scalable UI', 'Infrastructure'], slug: 'novus-design-system', externalLink: 'https://www.figma.com/deck/MExPN6YiryGBbMiY3XFy5i/Novus-Design-System?node-id=1-47265' },
   { title: 'SwapEasy', image: img3, tags: ['B2B SaaS', 'Recommerce', 'Enterprise UX'], slug: 'swapeasy' },
-  { title: 'Dr. Pashu', image: img4, tags: ['HealthTech', 'SaaS', 'Consultation Platform'], slug: 'dr-pashu' },
+  { title: 'Dr. Pashu', image: img4, tags: ['Healthcare', 'SaaS', 'Consultation Platform'], slug: 'dr-pashu' },
   // { title: 'Nexus Malls', image: img5, tags: ['E-commerce', 'RetailTech', 'Mobile Experience'] },
   // { title: 'Fynd Express', image: img6, tags: ['AI', 'Website Builder', 'Commerce'] },
 ]
 
-function WorkCard({ title, image, tags, slug }) {
+function WorkCard({ title, image, tags, slug, externalLink }) {
   const ref = useRef(null)
 
   useEffect(() => {
@@ -29,8 +29,8 @@ function WorkCard({ title, image, tags, slug }) {
     return () => obs.disconnect()
   }, [])
 
-  return (
-    <Link ref={ref} to={`/project/${slug}`} className="sw-card sw-animate">
+  const content = (
+    <>
       <div className="sw-card-img">
         <img src={image} alt={title} loading="lazy" />
       </div>
@@ -45,7 +45,21 @@ function WorkCard({ title, image, tags, slug }) {
           ))}
         </div>
       </div>
-    </Link>
+    </>
+  )
+
+  if (externalLink) {
+    return (
+      <a ref={ref} href={externalLink} target="_blank" rel="noopener noreferrer" className="sw-card sw-animate">
+        {content}
+      </a>
+    )
+  }
+
+  return (
+    <div ref={ref} className="sw-card sw-animate">
+      {content}
+    </div>
   )
 }
 
@@ -83,8 +97,8 @@ export default function Projects() {
               </div>
               <div ref={hrRef} className="hero-hr-line animate-fade-in" />
               <div ref={infoRef} className="proj-info animate-fade-in">
-                <div className="text-sm text-color-black-900">Crafting Since 2020</div>
-                <div className="text-sm text-color-black-900">Designing at Scale Today</div>
+                <div className="text-sm text-color-black-900">Crafting since 2020</div>
+                <div className="text-sm text-color-black-900">Designing at scale today</div>
               </div>
               {/* <div ref={introRef} className="proj-intro animate-fade-in">
                 <h3 className="heading-h3 home-hero">

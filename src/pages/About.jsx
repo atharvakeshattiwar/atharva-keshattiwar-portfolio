@@ -21,7 +21,7 @@ export default function About() {
       {/* <Process /> */}
       <ClientsCollab />
       <Experience />
-      <Reviews />
+      {/* <Reviews /> */}
       {/* <Faq /> */}
       <Footer />
     </>

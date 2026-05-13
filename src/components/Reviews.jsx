@@ -19,7 +19,7 @@ const reviews = [
     type: 'text',
     quote: 'Miller was instrumental in helping us launch our startup. His ability to blend technical expertise with creative thinking gave our brand the edge we needed in a competitive market.',
     name: 'Colton Gray',
-    role: 'Founder & CEO & Gexta',
+    role: 'Founder & CEO, Gexta',
     image: reviewer1,
   },
   {
@@ -33,14 +33,14 @@ const reviews = [
     type: 'text',
     quote: "Miller's creativity and attention to detail are unmatched. He turned our vision into a reality, delivering a project that exceeded all expectations. Truly a world-class designer.",
     name: 'Harper Jackson',
-    role: 'Founder & CEO & Dcode agency',
+    role: 'Founder & CEO, Dcode Agency',
     image: reviewer3,
   },
   {
     type: 'text',
     quote: 'I am working with Miller was a pleasure. Their team turned our vision into a digital masterpiece, with stunning design and seamless functionality. We couldn\'t be happier.',
     name: 'Avery Wyatt',
-    role: 'Founder Grayson @agency',
+    role: 'Founder, Grayson Agency',
     image: reviewer4,
   },
   {

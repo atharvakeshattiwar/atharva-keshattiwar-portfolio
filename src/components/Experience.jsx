@@ -1,7 +1,7 @@
 import { useEffect, useRef } from 'react'
 
 const experiences = [
-  { role: 'Product Designer 3', company: 'Fynd (Reliance Jio)', period: 'Oct 2022 — Present' },
+  { role: 'Sr. Product Designer', company: 'Fynd (Reliance Jio)', period: 'Oct 2022 — Present' },
   { role: 'Design Lead', company: 'Dr Pashu — ML Brains', period: 'Nov 2021 — Oct 2022' },
   { role: 'Visual Designer', company: 'A Buzz Company', period: 'Nov 2020 — Sep 2022' },
 ]
