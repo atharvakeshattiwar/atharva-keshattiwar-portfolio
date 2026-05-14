@@ -1,5 +1,6 @@
-import { useState } from 'react'
-import { Routes, Route } from 'react-router-dom'
+import { useState, useEffect } from 'react'
+import { Routes, Route, useLocation } from 'react-router-dom'
+import { initLetterReveal } from './utils/letterRevealGlobal'
 import Loader from './components/Loader'
 import Navbar from './components/Navbar'
 import ScrollToTop from './components/ScrollToTop'
@@ -8,10 +9,15 @@ import About from './pages/About'
 import Projects from './pages/Projects'
 import Contact from './pages/Contact'
 import ProjectDetail from './pages/ProjectDetail'
-import HeroTest from './pages/HeroTest'
 
 function App() {
   const [loading, setLoading] = useState(true)
+  const location = useLocation()
+
+  useEffect(() => {
+    const timer = setTimeout(() => initLetterReveal(), 300)
+    return () => clearTimeout(timer)
+  }, [location.pathname])
 
   return (
     <>
@@ -25,7 +31,6 @@ function App() {
         <Route path="/projects" element={<Projects />} />
         <Route path="/contact" element={<Contact />} />
         <Route path="/project/:slug" element={<ProjectDetail />} />
-        <Route path="/hero-test" element={<HeroTest />} />
       </Routes>
     </div>
     </>
