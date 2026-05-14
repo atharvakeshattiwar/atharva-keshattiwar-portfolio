@@ -2,7 +2,6 @@ import { useRef, useCallback } from 'react'
 import MouseTrail from '../components/MouseTrail'
 import IntroText from '../components/IntroText'
 import ThomasHero from '../components/ThomasHero'
-import HeroVideo from '../components/HeroVideo'
 import SelectedWorks from '../components/SelectedWorks'
 import SuccessNumbers from '../components/SuccessNumbers'
 import Partners from '../components/Partners'
@@ -44,7 +43,6 @@ export default function Home() {
         <IntroText />
         <ThomasHero />
       </div>
-      <HeroVideo />
       <SelectedWorks />
       <SuccessNumbers />
       <Partners />
