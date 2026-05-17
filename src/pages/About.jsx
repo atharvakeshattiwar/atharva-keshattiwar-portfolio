@@ -12,7 +12,7 @@ import Footer from '../components/Footer'
 
 export default function About() {
   return (
-    <>
+    <div className="page-with-bg">
       <AboutHero />
       <ImageCarousel />
       <AboutBio />
@@ -24,6 +24,6 @@ export default function About() {
       {/* <Reviews /> */}
       {/* <Faq /> */}
       <Footer />
-    </>
+    </div>
   )
 }

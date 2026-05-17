@@ -42,7 +42,7 @@ export default function Contact() {
   }
 
   return (
-    <>
+    <div className="page-with-bg">
       <section className="ct-section">
         <div className="ct-wrapper">
           <div className="ct-content">
@@ -94,6 +94,6 @@ export default function Contact() {
         </div>
       </section>
       <Footer />
-    </>
+    </div>
   )
 }

@@ -56,7 +56,7 @@ function WorkCard({ title, image, tags, slug, externalLink }) {
   }
 
   return (
-    <div ref={ref} className="sw-card sw-animate">
+    <div ref={ref} className="sw-card sw-card-nolink sw-animate">
       {content}
     </div>
   )
@@ -77,7 +77,7 @@ export default function SelectedWorks() {
   }, [])
 
   return (
-    <section className="sw-section">
+    <section className="sw-section" id="works">
       <div className="sw-wrapper">
         <div className="sw-top">
           <div ref={h1} className="sw-headline sw-animate">Selected Works</div>

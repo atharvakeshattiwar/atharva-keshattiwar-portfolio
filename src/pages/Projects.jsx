@@ -87,7 +87,7 @@ export default function Projects() {
   }, [])
 
   return (
-    <>
+    <div className="page-with-bg">
       <section className="proj-section">
         <div className="proj-wrapper">
           <div className="proj-content">
@@ -116,6 +116,6 @@ export default function Projects() {
         </div>
       </section>
       <Footer />
-    </>
+    </div>
   )
 }

@@ -1,4 +1,4 @@
-import { useState } from 'react'
+import { useState, useEffect } from 'react'
 import { Link, useLocation } from 'react-router-dom'
 import logo from '../assets/logo.png'
 
@@ -51,8 +51,21 @@ export default function Navbar() {
   const [mobileMenuOpen, setMobileMenuOpen] = useState(false)
   const location = useLocation()
 
+  useEffect(() => {
+    if (mobileMenuOpen) {
+      document.body.style.overflow = 'hidden'
+    } else {
+      document.body.style.overflow = ''
+    }
+    return () => { document.body.style.overflow = '' }
+  }, [mobileMenuOpen])
+
+  useEffect(() => {
+    setMobileMenuOpen(false)
+  }, [location.pathname])
+
   return (
-    <div className="navbar">
+    <div className={`navbar ${mobileMenuOpen ? 'nav-open' : ''}`}>
       <div className="nav-wrapper">
         <Link to="/" className="logo-link">
           <img src={logo} alt="Atharva K" className="nav-logo-img" />
@@ -80,11 +93,18 @@ export default function Navbar() {
 
         <div className="menu-button" onClick={() => setMobileMenuOpen(!mobileMenuOpen)}>
           <div className="menu-icon">
-            <svg width="24" height="18" viewBox="0 0 24 18" fill="none">
-              <line y1="1" x2="24" y2="1" stroke="#0c0407" strokeWidth="2" />
-              <line y1="9" x2="24" y2="9" stroke="#0c0407" strokeWidth="2" />
-              <line y1="17" x2="24" y2="17" stroke="#0c0407" strokeWidth="2" />
-            </svg>
+            {mobileMenuOpen ? (
+              <svg width="24" height="24" viewBox="0 0 24 24" fill="none">
+                <line x1="4" y1="4" x2="20" y2="20" stroke="#0c0407" strokeWidth="2" />
+                <line x1="20" y1="4" x2="4" y2="20" stroke="#0c0407" strokeWidth="2" />
+              </svg>
+            ) : (
+              <svg width="24" height="18" viewBox="0 0 24 18" fill="none">
+                <line y1="1" x2="24" y2="1" stroke="#0c0407" strokeWidth="2" />
+                <line y1="9" x2="24" y2="9" stroke="#0c0407" strokeWidth="2" />
+                <line y1="17" x2="24" y2="17" stroke="#0c0407" strokeWidth="2" />
+              </svg>
+            )}
           </div>
         </div>
 
