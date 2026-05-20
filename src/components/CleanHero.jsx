@@ -251,12 +251,11 @@ export default function CleanHero() {
               <span className="leah-name-dot leah-name-dot-tl" ref={dot1Ref} />
               <span className="leah-name-dot leah-name-dot-br" ref={dot2Ref} />
               <span className="leah-name-text">Atharva Keshattiwar</span>
-            </span>
-            <span className="leah-text-sans">, a Product Designer blending </span>
+            </span><span className="leah-text-sans">, a Product Designer blending </span>
             <span className="leah-text-serif">storytelling, systems, </span>
             <span className="leah-text-serif" style={{ whiteSpace: 'nowrap' }}>{serifLetters}</span>
             <span className="leah-text-sans"> and </span>
-            <span className="leah-text-serif">visual design</span>
+            <span className="leah-text-serif">visual craft</span>
             <span className="leah-text-sans"> into digital experiences.</span>
           </div>
         </div>
