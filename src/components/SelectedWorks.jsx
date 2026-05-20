@@ -8,7 +8,7 @@ import img5 from '../assets/works/monvera.avif'
 import img6 from '../assets/works/graphora.png'
 
 const projects = [
-  { title: 'Pizza Hut Malaysia', image: img1, tags: ['Foodtech', 'Ordering', 'Commerce'], slug: 'pizza-hut-malaysia', status: 'live' },
+  { title: 'Pizza Hut Malaysia', image: img1, tags: ['Foodtech', 'Ordering', 'Commerce'], slug: 'pizza-hut-malaysia', status: 'soon' },
   { title: 'Novus Design System', image: img2, tags: ['Design System', 'Scalable UI', 'Infrastructure'], slug: 'novus-design-system', externalLink: 'https://www.figma.com/deck/MExPN6YiryGBbMiY3XFy5i/Novus-Design-System?node-id=1-47265', status: 'live' },
   { title: 'SwapEasy', image: img3, tags: ['B2B SaaS', 'Recommerce', 'Enterprise UX'], slug: 'swapeasy', status: 'soon' },
   { title: 'Dr. Pashu', image: img4, tags: ['Healthcare', 'SaaS', 'Consultation Platform'], slug: 'dr-pashu', status: 'soon' },
