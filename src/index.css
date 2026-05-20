@@ -157,6 +157,10 @@
   box-sizing: border-box;
 }
 
+html {
+  overflow-y: scroll;
+}
+
 body {
   font-family: var(--font-inter);
   -webkit-font-smoothing: antialiased;
@@ -716,7 +720,6 @@ a {
   font-size: 0.75rem;
   font-weight: 500;
   letter-spacing: 0.02em;
-  opacity: 1;
   pointer-events: none;
   z-index: 2;
 }
@@ -3386,126 +3389,47 @@ a {
   line-height: 0;
 }
 
-/* ===== LOADER ===== */
-.loader-screen {
+/* ===== LOADER — Logo + Curtain Reveal ===== */
+.loader-reveal {
   position: fixed;
   inset: 0;
   z-index: 9999;
-  background-color: var(--color-primary-black);
+  background-color: #F8F3ED;
   display: flex;
   align-items: center;
   justify-content: center;
-  transition: opacity 0.8s ease, transform 0.8s ease;
-}
-
-.loader-exit {
-  opacity: 0;
-  transform: scale(1.05);
-  pointer-events: none;
-}
-
-/* Text Loader */
-.loader-text-wrap {
-  text-align: center;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  gap: 8px;
-}
-
-.loader-text-name {
-  font-family: var(--font-aspekta);
-  font-size: 64px;
-  font-weight: 600;
-  color: var(--color-primary-white);
-  opacity: 0;
-  transform: translateY(30px);
-  transition: opacity 0.6s ease, transform 0.6s ease;
-}
-
-.loader-text-role {
-  font-family: var(--font-inter);
-  font-size: 16px;
-  font-weight: var(--font-weight-medium);
-  color: rgba(255, 255, 255, 0.5);
-  opacity: 0;
-  transform: translateY(20px);
-  transition: opacity 0.6s ease 0.2s, transform 0.6s ease 0.2s;
-}
-
-.loader-text-show {
-  opacity: 1;
-  transform: translateY(0);
-}
-
-/* Counter Loader */
-.loader-counter-wrap {
-  text-align: center;
-}
-
-.loader-counter {
-  font-family: var(--font-aspekta);
-  font-size: 80px;
-  font-weight: 600;
-  color: var(--color-primary-white);
-  letter-spacing: -4px;
-}
-
-/* Logo Loader */
-.loader-logo-wrap {
-  display: flex;
-  align-items: center;
-  justify-content: center;
-}
-
-.loader-logo {
-  height: 60px;
-  width: auto;
-  filter: invert(1);
-  opacity: 0;
-  transform: scale(0.8);
-  transition: opacity 0.6s ease, transform 0.6s ease;
-}
-
-.loader-logo-show {
-  opacity: 1;
-  transform: scale(1);
-}
-
-/* Curtain Loader */
-.loader-curtain {
-  position: fixed;
-  inset: 0;
-  z-index: 9999;
-  background-color: var(--color-primary-black);
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  transition: transform 0.8s cubic-bezier(0.76, 0, 0.24, 1);
+  transition: transform 0.9s cubic-bezier(0.76, 0, 0.24, 1);
   transform-origin: top;
 }
 
-.loader-curtain-exit {
+.loader-reveal--curtain-exit {
   transform: translateY(-100%);
 }
 
-.loader-curtain-text {
-  font-family: var(--font-aspekta);
-  font-size: 48px;
-  font-weight: 600;
-  color: var(--color-primary-white);
-}
-
-.loader-curtain-text span {
+.loader-reveal-logo {
+  height: 50px;
+  width: auto;
   opacity: 0;
-  transform: translateY(20px);
-  display: inline-block;
+  transform: scale(0.85);
   transition: opacity 0.5s ease, transform 0.5s ease;
 }
 
-.loader-curtain-text .loader-text-show {
+.loader-reveal-logo--show {
   opacity: 1;
-  transform: translateY(0);
+  transform: scale(1);
+  animation: loaderPulse 1.4s ease-in-out infinite;
+}
+
+.loader-reveal-logo--hide {
+  opacity: 0;
+  transform: scale(0.9);
+  animation: none;
+  transition: opacity 0.4s ease, transform 0.4s ease;
+}
+
+@keyframes loaderPulse {
+  0%, 100% { transform: scale(1); }
+  50% { transform: scale(1.06); }
 }
 
 /* ===== HERO TRAIL AREA ===== */
@@ -3728,7 +3652,7 @@ a {
 .cs-hero {
   max-width: 2000px;
   overflow: hidden;
-  margin-bottom: 5rem;
+  margin-bottom: var(--global-margin);
 }
 
 .cs-hero-wrapper {
@@ -3951,7 +3875,7 @@ a {
 
 /* ===== CASE STUDY: MAIN/OVERVIEW ===== */
 .cs-main {
-  margin-bottom: 1.25rem;
+  margin-bottom: 2rem;
 }
 
 .cs-main-wrapper {
@@ -3974,13 +3898,42 @@ a {
 .cs-richtext-split {
   display: grid;
   grid-template-columns: 1fr 1fr;
-  gap: 1.25rem;
+  gap: 3rem;
   align-items: start;
+  width: 100%;
 }
 
 .cs-richtext-split .cs-richtext-heading {
+  font-family: var(--font-aspekta);
+  font-size: 5rem;
+  font-weight: 600;
+  letter-spacing: -4.8px;
+  line-height: 90%;
   margin-bottom: 0;
-  margin-top: -0.1875rem;
+}
+
+.cs-richtext-split .cs-richtext-para {
+  font-size: 0.875rem;
+  line-height: 1.25rem;
+  font-weight: var(--font-weight-medium);
+  color: var(--color-black-800);
+  letter-spacing: -0.14px;
+}
+
+.cs-richtext-left {
+  width: 100%;
+}
+
+.cs-richtext-right {
+  width: 100%;
+}
+
+.cs-richtext-left {
+  width: 100%;
+}
+
+.cs-richtext-right {
+  width: 100%;
 }
 
 .cs-richtext-left {
@@ -4059,8 +4012,8 @@ a {
   align-items: center;
   gap: 1.25rem;
   padding: 0;
-  margin-top: 6.9rem;
-  margin-bottom: 9.375rem;
+  margin-top: 0;
+  margin-bottom: var(--global-margin);
 }
 
 .cs-next-label {
@@ -4084,7 +4037,117 @@ a {
 
 /* ===== CASE STUDY: IMAGES ===== */
 .cs-images {
-  margin-bottom: 3.75rem;
+  margin-bottom: 2rem;
+}
+
+.cs-images + .cs-main {
+  margin-top: 5rem;
+}
+
+/* ===== CASE STUDY: PAIRED TEXT + IMAGE ===== */
+.cs-paired-section {
+  margin-bottom: var(--global-margin);
+}
+
+.cs-paired-wrapper {
+  max-width: var(--global-wrapper);
+  padding-left: var(--global-padding);
+  padding-right: var(--global-padding);
+  margin-left: auto;
+  margin-right: auto;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 3rem;
+  align-items: start;
+}
+
+.cs-paired-text {
+  width: 100%;
+}
+
+.cs-paired-text .cs-richtext-heading {
+  font-family: var(--font-aspekta);
+  font-size: 5rem;
+  font-weight: 600;
+  letter-spacing: -4.8px;
+  line-height: 90%;
+  margin-bottom: 1.5rem;
+}
+
+.cs-paired-text .cs-richtext-para {
+  font-size: 0.875rem;
+  line-height: 1.25rem;
+  font-weight: var(--font-weight-medium);
+  color: var(--color-black-800);
+  letter-spacing: -0.14px;
+  margin-bottom: 1rem;
+}
+
+.cs-paired-text .cs-richtext-para:last-child {
+  margin-bottom: 0;
+}
+
+.cs-paired-image {
+  width: 100%;
+}
+
+.cs-paired-image .cs-images-inner {
+  display: flex;
+  flex-direction: column;
+  gap: 1.25rem;
+}
+
+.cs-paired-image .cs-image-full img,
+.cs-paired-image .cs-image-big img {
+  width: 100%;
+  height: auto;
+  display: block;
+  object-fit: cover;
+}
+
+.cs-paired-image .cs-image-multi {
+  display: flex;
+  gap: 1.25rem;
+}
+
+.cs-paired-image .cs-image-small {
+  flex: 1;
+  overflow: hidden;
+}
+
+.cs-paired-image .cs-image-small img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.cs-paired-reversed .cs-paired-wrapper {
+  direction: rtl;
+}
+
+.cs-paired-reversed .cs-paired-wrapper > * {
+  direction: ltr;
+}
+
+.cs-paired-remaining {
+  max-width: var(--global-wrapper);
+  padding-left: var(--global-padding);
+  padding-right: var(--global-padding);
+  margin: 2rem auto 0;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 1.25rem;
+}
+
+.cs-paired-remaining .cs-image-full {
+  flex: 1 1 calc(50% - 0.625rem);
+  min-width: 300px;
+}
+
+.cs-paired-remaining .cs-image-full img {
+  width: 100%;
+  height: auto;
+  display: block;
 }
 
 .cs-images-wrapper {
@@ -4134,7 +4197,7 @@ a {
 
 /* ===== CASE STUDY: EMBED ===== */
 .cs-embed {
-  margin-bottom: 3.75rem;
+  margin-bottom: var(--global-margin);
 }
 
 .cs-embed-wrapper {
@@ -4168,7 +4231,7 @@ a {
 
 /* ===== CASE STUDY: TESTIMONIAL ===== */
 .cs-testimonial {
-  margin-bottom: 5rem;
+  margin-bottom: var(--global-margin);
 }
 
 .cs-testimonial-wrapper {
@@ -4604,7 +4667,7 @@ a {
 
 .leah-name-box {
   position: relative;
-  padding: 0 6px;
+  padding: 0;
   display: inline;
 }
 
@@ -6281,7 +6344,26 @@ a {
 
   .cs-richtext-split {
     grid-template-columns: 1fr;
-    gap: 1rem;
+    gap: 1.5rem;
+  }
+
+  .cs-richtext-split .cs-richtext-heading {
+    font-size: 3rem;
+    letter-spacing: -2px;
+  }
+
+  .cs-paired-wrapper {
+    grid-template-columns: 1fr;
+    gap: 2rem;
+  }
+
+  .cs-paired-reversed .cs-paired-wrapper {
+    direction: ltr;
+  }
+
+  .cs-paired-text .cs-richtext-heading {
+    font-size: 3rem;
+    letter-spacing: -2px;
   }
 
   .cs-main {
@@ -6308,7 +6390,6 @@ a {
   }
 
   .cs-next-project {
-    margin-top: 5.7rem;
     margin-bottom: 7rem;
   }
 
@@ -6946,7 +7027,6 @@ a {
   }
 
   .cs-next-project {
-    margin-top: 5.6rem;
     margin-bottom: 5rem;
   }
 
@@ -7560,7 +7640,6 @@ a {
   }
 
   .cs-next-project {
-    margin-top: 4.6rem;
     margin-bottom: 5rem;
   }
 

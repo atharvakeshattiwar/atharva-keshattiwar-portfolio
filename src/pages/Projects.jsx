@@ -12,8 +12,6 @@ const projects = [
   { title: 'Novus Design System', image: img2, tags: ['Design System', 'Scalable UI', 'Infrastructure'], externalLink: 'https://www.figma.com/deck/MExPN6YiryGBbMiY3XFy5i/Novus-Design-System?node-id=1-47265', status: 'live' },
   { title: 'SwapEasy', image: img3, tags: ['B2B SaaS', 'Recommerce', 'Enterprise UX'], status: 'soon' },
   { title: 'Dr. Pashu', image: img4, tags: ['Healthcare', 'SaaS', 'Consultation Platform'], status: 'soon' },
-  // { title: 'Nexus Malls', image: img5, tags: ['E-commerce', 'RetailTech', 'Mobile Experience'] },
-  // { title: 'Fynd Express', image: img6, tags: ['AI', 'Website Builder', 'Commerce'] },
 ]
 
 function WorkCard({ title, image, tags, externalLink, status }) {
@@ -61,7 +59,7 @@ function WorkCard({ title, image, tags, externalLink, status }) {
   }
 
   return (
-    <div ref={ref} className="sw-card sw-animate">
+    <div ref={ref} className="sw-card sw-card-nolink sw-animate">
       {content}
     </div>
   )
@@ -71,14 +69,12 @@ export default function Projects() {
   const headlineRef = useRef(null)
   const hrRef = useRef(null)
   const infoRef = useRef(null)
-  const introRef = useRef(null)
 
   useEffect(() => {
     const elements = [
       { ref: headlineRef, delay: 0 },
       { ref: hrRef, delay: 200 },
       { ref: infoRef, delay: 400 },
-      { ref: introRef, delay: 600 },
     ]
     elements.forEach(({ ref, delay }) => {
       if (ref.current) {
@@ -104,12 +100,6 @@ export default function Projects() {
                 <div className="text-sm text-color-black-900">Crafting since 2020</div>
                 <div className="text-sm text-color-black-900">Designing at scale today</div>
               </div>
-              {/* <div ref={introRef} className="proj-intro animate-fade-in">
-                <h3 className="heading-h3 home-hero">
-                  <span className="blank-text projects">_________________</span>
-                  [Explore a curated collection of my most impactful projects, showcasing creativity, strategy, and attention to detail]
-                </h3>
-              </div> */}
             </div>
             <div className="proj-bottom">
               <div className="sw-grid">
