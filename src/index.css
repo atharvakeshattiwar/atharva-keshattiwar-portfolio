@@ -9,376 +9,111 @@
   font-display: swap;
 }
 
-/* ===== CUSTOM CURSOR — DOG ===== */
-.char-cursor {
+/* ===== CUSTOM CURSOR — ROTATING RING ===== */
+.cur-dot,
+.cur-ring {
   position: fixed;
   top: 0;
   left: 0;
-  margin-left: -21px;
-  margin-top: -23px;
   pointer-events: none;
   z-index: 99999;
   will-change: transform;
   transition: opacity 0.3s ease;
-  isolation: isolate;
 }
 
-.char-cursor svg {
-  overflow: visible;
-  filter: drop-shadow(0 3px 8px rgba(0,0,0,0.25));
-  transition: transform 0.3s cubic-bezier(0.34, 1.56, 0.64, 1);
+.cur-dot {
+  width: 6px;
+  height: 6px;
+  margin-left: -3px;
+  margin-top: -3px;
+  background: #141414;
+  border-radius: 50%;
 }
 
-/* Ears */
-.dog-ear {
-  transition: transform 0.3s ease;
+.cur-ring {
+  margin-left: -30px;
+  margin-top: -30px;
 }
 
-/* Mouth */
-.dog-mouth {
-  stroke: #6b4420;
+.cur-ring svg {
+  animation: cursorSpin 4s linear infinite;
+}
+
+.cur-ring-track {
+  fill: none;
+  stroke: rgba(20, 20, 20, 0.08);
+  stroke-width: 1.5;
+}
+
+.cur-ring-arc {
+  fill: none;
+  stroke: #141414;
+  stroke-width: 2;
+  stroke-linecap: round;
+  stroke-dasharray: 30 120;
+  stroke-dashoffset: 0;
+}
+
+.cur-ring-arc2 {
+  fill: none;
+  stroke: rgba(20, 20, 20, 0.3);
   stroke-width: 1.5;
   stroke-linecap: round;
-  fill: none;
-  transition: d 0.3s ease, stroke-width 0.3s ease;
+  stroke-dasharray: 15 135;
+  stroke-dashoffset: 75;
 }
 
-/* Tongue — hidden by default */
-.dog-tongue {
-  fill: #e87080;
-  opacity: 0;
-  transition: opacity 0.3s ease, ry 0.3s ease, cy 0.3s ease;
+@keyframes cursorSpin {
+  to { transform: rotate(360deg); }
 }
 
-/* Blush — hidden by default */
-.dog-blush {
-  fill: rgba(220, 140, 100, 0);
-  transition: fill 0.3s ease;
+/* Hover — ring expands, slows down */
+.cur-ring svg {
+  transition: width 0.4s cubic-bezier(0.34, 1.56, 0.64, 1),
+              height 0.4s cubic-bezier(0.34, 1.56, 0.64, 1);
 }
 
-/* Brows */
-.dog-brow {
-  transition: d 0.3s ease;
+.cur-ring.cursor-hover {
+  margin-left: -40px;
+  margin-top: -40px;
+  transition: margin 0.4s cubic-bezier(0.34, 1.56, 0.64, 1);
 }
 
-/* Eyes */
-.dog-eye-white {
-  transition: ry 0.25s ease, rx 0.25s ease;
-}
-.dog-iris {
-  transition: ry 0.25s ease, rx 0.25s ease;
-}
-.dog-pupil {
-  transition: r 0.25s ease;
-}
-.dog-shine {
-  transition: r 0.25s ease, opacity 0.25s ease;
+.cur-ring.cursor-hover svg {
+  width: 80px;
+  height: 80px;
+  animation-duration: 6s;
 }
 
-/* ---- DEFAULT: happy pup ---- */
-.char-cursor--default .dog-mouth {
-  d: path("M22 38.5 Q26 42 30 38.5");
+.cur-ring.cursor-hover .cur-ring-arc {
+  stroke-dasharray: 50 100;
+  stroke: #141414;
 }
 
-/* Blink */
-@keyframes dogBlink {
-  0%, 91%, 100% { ry: 5.8; }
-  95.5% { ry: 0.8; }
+.cur-ring.cursor-hover .cur-ring-arc2 {
+  stroke-dasharray: 25 125;
 }
 
-.char-cursor--default .dog-eye-white {
-  animation: dogBlink 3s ease-in-out infinite;
+.cur-ring:not(.cursor-hover) {
+  transition: margin 0.4s cubic-bezier(0.34, 1.56, 0.64, 1);
 }
 
-/* Ear wiggle — subtle bounce on the inner ellipse */
-@keyframes earBounce {
-  0%, 100% { transform: translateY(0); }
-  50% { transform: translateY(2px); }
+/* Click — ring shrinks fast */
+.cur-ring.cursor-click {
+  margin-left: -20px;
+  margin-top: -20px;
 }
 
-.char-cursor--default .dog-ear-l {
-  animation: earBounce 2.5s ease-in-out infinite;
-}
-.char-cursor--default .dog-ear-r {
-  animation: earBounce 2.5s ease-in-out infinite;
-  animation-delay: 1.2s;
+.cur-ring.cursor-click svg {
+  width: 40px;
+  height: 40px;
+  animation-duration: 0.5s;
 }
 
-/* ---- EXCITED: tail-wagging energy! tongue out, big eyes ---- */
-.char-cursor--excited svg {
-  transform: scale(1.12);
+.cur-ring.cursor-click .cur-ring-arc {
+  stroke-width: 3;
 }
 
-.char-cursor--excited .dog-eye-white {
-  ry: 7;
-  rx: 6;
-}
-
-.char-cursor--excited .dog-iris {
-  ry: 4.8;
-  rx: 4.2;
-}
-
-.char-cursor--excited .dog-pupil {
-  r: 2.8;
-}
-
-.char-cursor--excited .dog-shine {
-  r: 1.6;
-}
-
-.char-cursor--excited .dog-mouth {
-  d: path("M20 38 Q26 44 32 38");
-  stroke-width: 1.8;
-}
-
-.char-cursor--excited .dog-tongue {
-  opacity: 1;
-  ry: 5;
-  cy: 45;
-}
-
-.char-cursor--excited .dog-blush {
-  fill: rgba(220, 140, 100, 0.3);
-}
-
-.char-cursor--excited .dog-brow-l {
-  d: path("M12 19 Q15 16 22 18");
-}
-.char-cursor--excited .dog-brow-r {
-  d: path("M30 18 Q37 16 40 19");
-}
-
-.char-cursor--excited .dog-ear-l {
-  animation: earBounce 0.4s ease-in-out infinite;
-}
-.char-cursor--excited .dog-ear-r {
-  animation: earBounce 0.4s ease-in-out infinite;
-  animation-delay: 0.1s;
-}
-
-/* ---- READING: focused squint, tilted head ---- */
-.char-cursor--reading svg {
-  transform: scale(0.9) rotate(8deg);
-}
-
-.char-cursor--reading .dog-eye-white {
-  ry: 3.5;
-}
-
-.char-cursor--reading .dog-iris {
-  ry: 2.5;
-}
-
-.char-cursor--reading .dog-pupil {
-  r: 1.6;
-}
-
-.char-cursor--reading .dog-shine {
-  opacity: 0.5;
-  r: 0.7;
-}
-
-.char-cursor--reading .dog-mouth {
-  d: path("M23 38.5 Q26 39.5 29 38.5");
-}
-
-.char-cursor--reading .dog-brow-l {
-  d: path("M12 20 Q15 17 22 19");
-}
-.char-cursor--reading .dog-brow-r {
-  d: path("M30 21 Q37 20 40 22");
-}
-
-/* ---- CLICK: surprised woof! ---- */
-.char-cursor--click svg {
-  transform: scale(0.92) scaleY(0.85);
-}
-
-.char-cursor--click .dog-eye-white {
-  ry: 7.5;
-  rx: 6.5;
-}
-
-.char-cursor--click .dog-iris {
-  ry: 5;
-  rx: 4.5;
-}
-
-.char-cursor--click .dog-pupil {
-  r: 1.3;
-}
-
-.char-cursor--click .dog-shine {
-  r: 1.6;
-}
-
-.char-cursor--click .dog-mouth {
-  d: path("M22 38 Q26 45 30 38");
-  stroke-width: 1.8;
-}
-
-.char-cursor--click .dog-brow-l {
-  d: path("M12 19 Q15 15 22 18");
-}
-.char-cursor--click .dog-brow-r {
-  d: path("M30 18 Q37 15 40 19");
-}
-
-/* ---- Speech bubble ---- */
-.dog-bubble {
-  position: absolute;
-  top: -18px;
-  left: 50%;
-  transform: translateX(-50%) translateY(-100%) scale(0);
-  background: #141414;
-  color: #fff;
-  font-family: var(--font-inter);
-  font-size: 12px;
-  font-weight: 600;
-  letter-spacing: 0.03em;
-  padding: 8px 18px;
-  border-radius: 20px;
-  white-space: nowrap;
-  opacity: 0;
-  transition: transform 0.35s cubic-bezier(0.34, 1.56, 0.64, 1),
-              opacity 0.25s ease;
-  pointer-events: none;
-  box-shadow: 0 4px 12px rgba(0,0,0,0.2);
-}
-
-.dog-bubble::after {
-  content: '';
-  position: absolute;
-  bottom: -6px;
-  left: 50%;
-  margin-left: -6px;
-  border-left: 6px solid transparent;
-  border-right: 6px solid transparent;
-  border-top: 7px solid #141414;
-}
-
-/* ---- Bubble visibility per state ---- */
-.char-cursor--soon .dog-bubble-soon {
-  opacity: 1;
-  transform: translateX(-50%) translateY(-100%) scale(1);
-}
-
-.char-cursor--live .dog-bubble-live {
-  opacity: 1;
-  transform: translateX(-50%) translateY(-100%) scale(1);
-}
-
-.dog-bubble-live {
-  background: #16a34a !important;
-}
-
-.dog-bubble-live::after {
-  border-top-color: #16a34a !important;
-}
-
-/* ---- SOON: sad puppy face ---- */
-.char-cursor--soon svg {
-  transform: scale(1.05);
-}
-
-.char-cursor--soon .dog-eye-white {
-  ry: 6.8;
-  rx: 5.5;
-}
-
-.char-cursor--soon .dog-iris {
-  ry: 5;
-  rx: 4;
-}
-
-.char-cursor--soon .dog-pupil {
-  r: 2.5;
-  cy: 29;
-}
-
-.char-cursor--soon .dog-shine {
-  r: 1.6;
-}
-
-.char-cursor--soon .dog-brow-l {
-  d: path("M12 19 Q15 21 22 22");
-}
-
-.char-cursor--soon .dog-brow-r {
-  d: path("M30 22 Q37 21 40 19");
-}
-
-.char-cursor--soon .dog-mouth {
-  d: path("M20 40 Q26 36 32 40");
-  stroke-width: 1.6;
-}
-
-.char-cursor--soon .dog-ear-l {
-  animation: none;
-  transform: translateY(3px);
-}
-
-.char-cursor--soon .dog-ear-r {
-  animation: none;
-  transform: translateY(3px);
-}
-
-/* ---- LIVE: extra happy face + green bubble ---- */
-.char-cursor--live svg {
-  transform: scale(1.2);
-}
-
-.char-cursor--live .dog-eye-white {
-  ry: 3.5;
-  rx: 5.5;
-}
-
-.char-cursor--live .dog-iris {
-  ry: 2.5;
-  rx: 4;
-}
-
-.char-cursor--live .dog-pupil {
-  r: 1.8;
-  cy: 27;
-}
-
-.char-cursor--live .dog-shine {
-  r: 1.8;
-  opacity: 1;
-}
-
-.char-cursor--live .dog-brow-l {
-  d: path("M12 20 Q15 17 22 19");
-}
-
-.char-cursor--live .dog-brow-r {
-  d: path("M30 19 Q37 17 40 20");
-}
-
-.char-cursor--live .dog-mouth {
-  d: path("M17 37 Q26 47 35 37");
-  stroke-width: 2;
-}
-
-.char-cursor--live .dog-tongue {
-  opacity: 1;
-  ry: 6;
-  cy: 46;
-}
-
-.char-cursor--live .dog-blush {
-  fill: rgba(220, 140, 100, 0.45);
-}
-
-.char-cursor--live .dog-ear-l {
-  animation: earBounce 0.3s ease-in-out infinite;
-}
-.char-cursor--live .dog-ear-r {
-  animation: earBounce 0.3s ease-in-out infinite;
-  animation-delay: 0.08s;
-}
 
 /* Hide on real touch-only devices (not DevTools emulation) */
 @media (pointer: coarse) and (hover: none) {
@@ -429,15 +164,6 @@ body {
   background-color: var(--color-primary-white);
 }
 
-body, a, button, input {
-  cursor: none !important;
-}
-
-@media (pointer: coarse) and (hover: none) {
-  body, a, button, input {
-    cursor: auto !important;
-  }
-}
 
 a {
   text-decoration: none;
@@ -980,6 +706,38 @@ a {
   transform: scale(1.05);
 }
 
+.sw-status-bubble {
+  position: absolute;
+  top: 1rem;
+  right: 1rem;
+  padding: 0.375rem 0.875rem;
+  border-radius: 100px;
+  font-family: var(--font-inter);
+  font-size: 0.75rem;
+  font-weight: 500;
+  letter-spacing: 0.02em;
+  opacity: 0;
+  transform: translateY(6px);
+  transition: opacity 0.3s ease, transform 0.3s ease;
+  pointer-events: none;
+  z-index: 2;
+}
+
+.sw-status-live {
+  background: #000;
+  color: #fff;
+}
+
+.sw-status-soon {
+  background: rgba(0, 0, 0, 0.75);
+  color: #fff;
+  backdrop-filter: blur(8px);
+}
+
+.sw-card:hover .sw-status-bubble {
+  opacity: 1;
+  transform: translateY(0);
+}
 
 .sw-card-info {
   justify-content: space-between;
@@ -1054,8 +812,10 @@ a {
 }
 
 .sw-animate {
-  opacity: 1;
-  transform: none;
+  opacity: 0;
+  transform: translateY(1.5rem);
+  transition: opacity 0.7s cubic-bezier(0.25, 0.46, 0.45, 0.94),
+              transform 0.7s cubic-bezier(0.25, 0.46, 0.45, 0.94);
 }
 
 .text-lg {
@@ -4856,14 +4616,7 @@ a {
 }
 
 .leah-name-bg {
-  position: absolute;
-  inset: 0;
-  background-color: rgba(38, 99, 242, 0.12);
-  border-left: 2px solid rgba(38, 99, 242, 0.45);
-  border-right: 2px solid rgba(38, 99, 242, 0.45);
-  transform: scaleX(0);
-  transform-origin: left center;
-  pointer-events: none;
+  display: none;
 }
 
 .leah-name-text {
@@ -4872,13 +4625,7 @@ a {
 }
 
 .leah-name-dot {
-  position: absolute;
-  width: 5px;
-  height: 5px;
-  border-radius: 50%;
-  background-color: rgb(38, 99, 242);
-  z-index: 2;
-  transform: scale(0);
+  display: none;
 }
 
 .leah-name-dot-tl {
@@ -4930,9 +4677,9 @@ a {
   display: inline-flex;
   align-items: center;
   gap: 6px;
-  padding: clamp(6px, 0.5vw + 2px, 8px) clamp(10px, 1vw + 4px, 16px);
+  padding: clamp(4px, 0.4vw + 1px, 6px) clamp(8px, 0.8vw + 2px, 12px);
   font-family: 'Inter', sans-serif;
-  font-size: clamp(11px, 0.5vw + 6px, 13px);
+  font-size: clamp(10px, 0.4vw + 5px, 12px);
   font-weight: 400;
   letter-spacing: -0.24px;
   line-height: 20.15px;

@@ -8,15 +8,15 @@ import img5 from '../assets/works/monvera.avif'
 import img6 from '../assets/works/graphora.png'
 
 const projects = [
-  { title: 'Pizza Hut Malaysia', image: img1, tags: ['Foodtech', 'Ordering', 'Commerce'], slug: 'pizza-hut-malaysia' },
-  { title: 'Novus Design System', image: img2, tags: ['Design System', 'Scalable UI', 'Infrastructure'], slug: 'novus-design-system', externalLink: 'https://www.figma.com/deck/MExPN6YiryGBbMiY3XFy5i/Novus-Design-System?node-id=1-47265' },
-  { title: 'SwapEasy', image: img3, tags: ['B2B SaaS', 'Recommerce', 'Enterprise UX'], slug: 'swapeasy' },
-  { title: 'Dr. Pashu', image: img4, tags: ['Healthcare', 'SaaS', 'Consultation Platform'], slug: 'dr-pashu' },
+  { title: 'Pizza Hut Malaysia', image: img1, tags: ['Foodtech', 'Ordering', 'Commerce'], slug: 'pizza-hut-malaysia', status: 'live' },
+  { title: 'Novus Design System', image: img2, tags: ['Design System', 'Scalable UI', 'Infrastructure'], slug: 'novus-design-system', externalLink: 'https://www.figma.com/deck/MExPN6YiryGBbMiY3XFy5i/Novus-Design-System?node-id=1-47265', status: 'live' },
+  { title: 'SwapEasy', image: img3, tags: ['B2B SaaS', 'Recommerce', 'Enterprise UX'], slug: 'swapeasy', status: 'soon' },
+  { title: 'Dr. Pashu', image: img4, tags: ['Healthcare', 'SaaS', 'Consultation Platform'], slug: 'dr-pashu', status: 'soon' },
   // { title: 'Nexus Malls', image: img5, tags: ['E-commerce', 'RetailTech', 'Mobile Experience'] },
   // { title: 'Fynd Express', image: img6, tags: ['AI', 'Website Builder', 'Commerce'] },
 ]
 
-function WorkCard({ title, image, tags, slug, externalLink }) {
+function WorkCard({ title, image, tags, slug, externalLink, status }) {
   const ref = useRef(null)
 
   useEffect(() => {
@@ -32,6 +32,11 @@ function WorkCard({ title, image, tags, slug, externalLink }) {
     <>
       <div className="sw-card-img">
         <img src={image} alt={title} loading="lazy" />
+        {status && (
+          <span className={`sw-status-bubble sw-status-${status}`}>
+            {status === 'live' ? 'Live' : 'Coming Soon'}
+          </span>
+        )}
       </div>
       <div className="sw-card-info">
         <div className="sw-card-title">{title}</div>
