@@ -2,7 +2,6 @@ import { useState, useEffect } from 'react'
 import { Routes, Route, useLocation } from 'react-router-dom'
 import { initLetterReveal } from './utils/letterRevealGlobal'
 import Loader from './components/Loader'
-import CustomCursor from './components/CustomCursor'
 import Navbar from './components/Navbar'
 import ScrollToTop from './components/ScrollToTop'
 import Home from './pages/Home'
@@ -23,7 +22,6 @@ function App() {
   return (
     <>
       {/* {loading && <Loader onComplete={() => setLoading(false)} />} */}
-      <CustomCursor />
       <div className="body-wrapper">
         <ScrollToTop />
         <Navbar />
