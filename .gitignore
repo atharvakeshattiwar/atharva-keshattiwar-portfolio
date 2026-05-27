@@ -5,4 +5,5 @@ dist
 .vite
 test-results
 *.mov
+public/phm-*.mp4
 .vercel

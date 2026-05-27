@@ -19,36 +19,26 @@ import phShipped from '../assets/case-studies/pizza-hut/11-shipped.png'
 import phNext from '../assets/case-studies/pizza-hut/12-whats-next.png'
 import phLearnings from '../assets/case-studies/pizza-hut/13-learnings.png'
 import phAvatar from '../assets/case-studies/pizza-hut/testimonial-avatar.jpeg'
+import landscape10 from '../assets/carousel-ref/Landscape_10.png'
 
 const projectsData = {
   'pizza-hut-malaysia': {
     title: 'Pizza Hut',
-    heroImage: phHero,
+    heroImage: landscape10,
     info: [
-      { label: 'Project Name', value: 'Pizza Hut Malaysia' },
       { label: 'Industry', value: 'Omnichannel, B2C Commerce, QSR' },
       { label: 'Headquarters', value: 'Kuala Lumpur, MY' },
       { label: 'Timeline', value: '2025 - 2026' },
     ],
-    subtitle: 'Led end-to-end omnichannel transformation for Pizza Hut Malaysia — won a $5M, 5-year engagement, then designed a unified ordering system targeting an 85% top-of-funnel drop-off across web, app, and kiosk for ~4.9M customers.',
-    services: 'Product Strategy, Research, UX Architecture, Lead Design, Stakeholder Management, Design QA',
-    liveLink: 'https://pizza-hut-uat.fynd.io/',
+    liveLink: 'https://www.pizzahut.com.my/',
     sections: [
       {
-        type: 'embed',
-        embedType: 'youtube',
-        videoId: 'Yinug9BxuZM',
-      },
-      {
         type: 'text',
-        heading: 'At a Glance',
+        heading: 'Overview',
         paragraphs: [
-          '<strong>Outcome:</strong> Won a $5M engagement (3+2 years) to rebuild Pizza Hut Malaysia\'s digital ordering across channels.',
-          '<strong>Scale:</strong> ~4.9M customers (client base).',
-          '<strong>Platforms:</strong> Mobile app, Web, Self-checkout/Kiosk, backed by Fynd Commerce OMS (which I own as design lead).',
-          '<strong>Timeline:</strong> Pitch (May 2025) → Build (from Jul 2025) → Phase 1 ship Apr 2026.',
-          '<strong>My role:</strong> Design Lead + Design SPOC + primary client presenter. I owned product strategy, research, UX architecture, and end-to-end UI flows; we executed with engineering through dev reviews and QC.',
-          '<strong>Team:</strong> I led 2 designers (Mobile + Web & Tablet) + partnered tightly with Engineering + Product + Client stakeholders.',
+          'Pizza Hut Malaysia\'s digital ecosystem served customers across multiple ordering touchpoints including mobile applications, web platforms, kiosks, and in-store systems. While the ecosystem had evolved over time, the experience across platforms lacked consistency, clarity, and scalability.',
+          'The project focused on reimagining the <span class="highlight">end-to-end omnichannel ordering journey</span> to create a more unified experience across touchpoints while improving usability, navigation clarity, interaction patterns, and customer flows throughout the ecosystem.',
+          'Rather than treating every platform independently, the goal was to create <span class="highlight">one connected experience system</span> that felt cohesive across every customer interaction.',
         ],
       },
       {
@@ -58,20 +48,12 @@ const projectsData = {
       },
       {
         type: 'text',
-        heading: 'Problem',
+        heading: 'The Challenge',
         paragraphs: [
-          'PHM\'s owned channels had demand, but the ordering <strong>funnel leaked</strong> before users could reliably see the right menu and pricing for their location.',
-          '<strong>Macro channel problem (where orders come from):</strong> Order volume was heavily split across Offline takeaway (38%) and Food Aggregators (36%), while owned <strong>digital lagged (App 17%, Website 2%)</strong>. That\'s a margin + loyalty + data ceiling unless owned conversion improves. Owned channels had meaningful AOV headroom (e.g., Website AOV ~RM 40.99, App AOV ~RM 35.84, BYOD ~RM 58.69) — the problem wasn\'t value; it was funnel leakage.',
-          '<strong>Funnel reality (where users drop):</strong> Web conversion lagged massively vs app: Web user <strong>CR ~5.3% vs iOS ~32.5% and Android ~33.9%</strong>. The single biggest leak was localisation on web: 101,294 sessions → 79% engaged → <strong>only 15% "localise success" → 11% add-to-cart → 8% checkout → 5% purchase</strong>. That means <strong>~85% of users failed before we could even show accurate menu/pricing</strong> (the point where QSR ordering becomes "real"). Checkout also underperformed on web: <strong>63%</strong> completion vs App <strong>~80%</strong>.',
-          '<strong>User pain (qual + quantified):</strong> From review analysis + UX findings, the most recurring problem clusters were:',
+          'Designing for Pizza Hut Malaysia required understanding how multiple systems, customer journeys, and operational workflows interacted within a large-scale ordering ecosystem.',
+          'Customers navigated across mobile apps, kiosks, websites, and in-store experiences, but the ecosystem lacked consistency across navigation patterns, ordering flows, interaction behaviors, and visual hierarchy.',
+          'The challenge was building a <span class="highlight">scalable experience system</span> that could feel unified across platforms while adapting naturally to different devices, environments, and user behaviors.',
         ],
-        bullets: [
-          'App crashes & technical bugs (16.3%) including checkout/payment instability.',
-          'Location & address issues (12.4%) (GPS overrides, pin loops, "area not covered" shown late).',
-          'Payment & pricing issues (8.5%).',
-          'Delivery service issues (11.1%) and order-management gaps (7.2%).',
-        ],
-        afterBullets: '<strong>Product constraint that made this harder:</strong> <strong>~70%</strong> of transactions were <strong>combos</strong>, so we couldn\'t "simplify" by removing complexity — we had to make complex ordering feel effortless and resilient to stock/pricing changes.',
       },
       {
         type: 'images',
@@ -80,19 +62,11 @@ const projectsData = {
       },
       {
         type: 'text',
-        heading: 'Pitch that won the deal',
+        heading: 'Discovery & Collaboration',
         paragraphs: [
-          'Before opening Figma, I audited PHM\'s existing app and 3 competing QSR platforms in the region. Every single one had the same failure: localisation was treated as a screen, not a system state. That audit became the design thesis — fix localisation as infrastructure, not as UI.',
-          'We had 2 days to make the pitch real. I led a 3-person design sprint across onboarding, localisation, browsing, combos, and checkout — producing <strong>150+ screen states</strong> across mobile and desktop, and presented it on-site in Malaysia.',
-          'What mattered: we didn\'t sell screens — we sold a working omnichannel system:',
-        ],
-        bullets: [
-          'Localisation and checkout conversion',
-          'Mix & Match (Combo Builder)',
-          'Kiosk / Self-checkout',
-          'App + Web omnichannel parity',
-          'Loyalty / Value Meals',
-          'AI-assisted checkout (later phase)',
+          'Working closely with the PHM design team and stakeholders helped uncover operational and customer-side complexities throughout the ecosystem. Conversations around customer behavior, ordering patterns, store operations, and platform limitations revealed how fragmented experiences created friction across touchpoints.',
+          'The process involved understanding not only how users interacted digitally, but also how the broader operational ecosystem functioned behind the scenes.',
+          'This <span class="highlight">collaborative understanding</span> played an important role in shaping more connected and scalable experience decisions across the project.',
         ],
       },
       {
@@ -102,14 +76,18 @@ const projectsData = {
       },
       {
         type: 'text',
-        heading: 'What I optimised for',
+        heading: 'Experience Strategy',
         paragraphs: [
-          'Users don\'t think in "modules." They think: <em>"Show me what I can order, at my location, right now — fast."</em> So my core bet was:',
+          'The experience strategy focused on simplifying customer interactions while creating consistency across the omnichannel ecosystem. Instead of redesigning isolated screens, the approach centered around aligning navigation systems, interaction patterns, layouts, and customer flows across platforms.',
+          'Mobile experiences became one of the primary customer touchpoints within the ecosystem, requiring interactions that felt intuitive, efficient, and scalable while still aligning with the broader platform experience.',
         ],
         bullets: [
-          'Make localisation invisible when possible.',
-          'Make it reversible when needed.',
-          'Never allow it to corrupt cart validity, pricing integrity, or store serviceability. <em>That single bet shaped architecture, UI, and dev rules.</em>',
+          'Simplified ordering flows',
+          'Better navigation clarity',
+          'Consistent interaction behaviors',
+          'Scalable UI systems',
+          'Improved visual hierarchy',
+          'Ecosystem-wide consistency',
         ],
       },
       {
@@ -119,16 +97,25 @@ const projectsData = {
       },
       {
         type: 'text',
-        heading: 'Targets (pre-launch)',
+        heading: 'Mobile Experience',
         paragraphs: [
-          'These were defined before launch to keep the team honest and instrumentation-ready.',
+          'As part of the PHM design team, I actively <span class="highlight">led mobile experience explorations</span> across the ordering ecosystem. The focus was on crafting interactions that felt intuitive, accessible, visually cohesive, and scalable across evolving customer journeys.',
+          'Special attention was given to ordering efficiency, interaction feedback, navigation clarity, and accessibility throughout the mobile experience. Since mobile acted as one of the most active customer touchpoints, the challenge was balancing speed, simplicity, and scalability within a larger omnichannel system.',
+          'The process also involved close collaboration across web, kiosk, and tablet experiences to ensure the ecosystem behaved consistently across every platform.',
         ],
-        bullets: [
-          '<strong>North-star:</strong> Increase purchase conversion on owned channels by fixing early trust + friction.',
-          '<strong>Localisation:</strong> Web "localise success": <strong>15% → ≥80%</strong> (Equivalent to >80% reduction in localisation drop-off). App: <strong>65% → ≥80%</strong>. Address/GPS failure events: <strong>-50%</strong>.',
-          '<strong>Add-to-cart:</strong> Web ATC rate: <strong>11% → ≥18%</strong>. Combo completion: <strong>≥95%</strong> once a user starts a combo flow (no dead ends).',
-          '<strong>Checkout:</strong> Web checkout completion: <strong>63% → ≥75%</strong>. Reduce "session expired" occurrences: <strong>-50%</strong>.',
-          '<strong>Retention drivers:</strong> Increase reorder conversion: <strong>+20%</strong>. Increase rewards engagement: <strong>+25%</strong>.',
+      },
+      {
+        type: 'images',
+        layout: 'stacked',
+        images: [phBuilt1, phBuilt2, phBuilt3],
+      },
+      {
+        type: 'text',
+        heading: 'Design System & Scalability',
+        paragraphs: [
+          'Maintaining consistency across multiple touchpoints required a scalable and systems-driven design approach. Working alongside the PHM design team, the ecosystem evolved around reusable patterns, unified interaction behaviors, scalable layouts, and shared visual principles across platforms.',
+          'The design system approach helped create stronger consistency across the omnichannel ecosystem while improving flexibility for future expansion and evolving customer experiences.',
+          'Beyond visual consistency, the system was designed to create <span class="highlight">familiarity, predictability, and smoother interactions</span> across every platform.',
         ],
       },
       {
@@ -137,84 +124,17 @@ const projectsData = {
         big: phTargets,
       },
       {
-        type: 'text',
-        heading: 'What we built and why it worked',
-        paragraphs: [
-          '<strong>1) Auto-localisation that doesn\'t feel like a gate</strong><br/>The original experience forced users to "set context" before they could meaningfully browse, and it failed often. I redesigned localisation as a system, not a screen:',
-        ],
-        bullets: [
-          '<strong>Mode-scoped contexts:</strong> separate state for Delivery vs Pickup with Delivery as default, so switching modes doesn\'t destroy intent or data.',
-          '<strong>Auto-assign store</strong> when location is available; confirm when needed; never silently override manual choice; Reassign only on meaningful change or invalid selection.',
-          '<strong>Cart revalidation:</strong> When location/store changes, items may become unavailable or prices can update; user gets an explicit "what changed" moment instead of silent corruption.',
-        ],
-      },
-      {
-        type: 'images',
-        layout: 'full',
-        big: phBuilt1,
-      },
-      {
-        type: 'text',
-        heading: '',
-        paragraphs: [
-          '<strong>2) Mix & Match combo engine that enforces validity</strong><br/>Because combos drove ~70% of transactions, the combo flow had to be conversion-grade and ops-grade. I shipped a combo builder that is:',
-        ],
-        bullets: [
-          'Stateful and step-based (clear progress; users always know "where am I?").',
-          'Resilient to inventory + pricing realities (Out-of-stock items are visibly sold out + not selectable).',
-          'Designed for swapping, not restarting.',
-          'Dynamic pricing updates live and reflects natively in cart.',
-        ],
-      },
-      {
-        type: 'images',
-        layout: 'full',
-        big: phBuilt2,
-      },
-      {
-        type: 'text',
-        heading: '',
-        paragraphs: [
-          '<strong>3) Checkout + reliability improvements tied to measurable drop-offs</strong><br/>The funnel showed web checkout completion at 63% vs app ~80%, so I treated checkout as a reliability program, not just UI polish.',
-        ],
-        bullets: [
-          'Reduced ambiguity in delivery/pickup context at checkout (so users don\'t discover serviceability late).',
-          'Designed failure-aware states (clear recovery when payment/session fails).',
-          'Closed the loop with OMS constraints (store hours, serviceability, order lifecycle) so the UI matches operational truth.',
-        ],
-      },
-      {
-        type: 'images',
-        layout: 'full',
-        big: phBuilt3,
-      },
-      {
         type: 'embed',
         embedType: 'figma',
         src: 'https://embed.figma.com/board/adLyswmnW2Qjv81zoCwAWz/Pizza-Hut-Presentation?node-id=0-1&embed-host=share',
       },
       {
         type: 'text',
-        heading: 'How we executed',
+        heading: 'Omnichannel Ecosystem',
         paragraphs: [
-          'I ran the project with a "decisions stay traceable" discipline:',
-        ],
-        bullets: [
-          'I facilitated and presented client workshops as the SPOC.',
-          'We documented workshop outcomes directly inside Figma, then replayed deltas in the next cycle.',
-          'I converted decisions into dev notes with edge cases so implementation matched intent.',
-        ],
-      },
-      {
-        type: 'text',
-        heading: '',
-        paragraphs: [
-          '<strong>AI-accelerated delivery:</strong>',
-        ],
-        bullets: [
-          'Synthesised research + requirements into <strong>structured decision docs</strong>.',
-          'Used <strong>AI-assisted prototyping workflows</strong> to validate end-to-end journeys early.',
-          'Partnered with engineering using <strong>AI-assisted dev/QC loops (Cursor AI)</strong> to catch UI/UX regressions faster.',
+          'The project extended far beyond a single platform. Every touchpoint — from mobile ordering and kiosk interactions to tablet and web systems — needed to feel connected as part of one unified experience ecosystem.',
+          'Design decisions across platforms were approached collaboratively to ensure users experienced familiarity throughout their journey regardless of device or environment.',
+          'This ecosystem-first approach helped create smoother customer experiences while supporting scalability across Pizza Hut Malaysia\'s growing digital platforms.',
         ],
       },
       {
@@ -225,47 +145,29 @@ const projectsData = {
       {
         type: 'embed',
         embedType: 'youtube',
-        videoId: 'xt9L204p9Ig',
+        videoId: 'Yinug9BxuZM',
       },
       {
         type: 'text',
-        heading: 'What we shipped',
-        paragraphs: [],
-        bullets: [
-          'Localisation system (delivery + pickup contexts, address, store selection, validation).',
-          'Menu discovery + customisation foundations.',
-          'Mix & Match combo builder with validity + OOS + dynamic price behaviour.',
-          'Cart + checkout flows aligned with OMS constraints.',
-          'Self-checkout/kiosk journey foundations.',
+        heading: 'Outcome',
+        paragraphs: [
+          'The redesigned ecosystem introduced a more <span class="highlight">modern, connected, and scalable ordering experience</span> across Pizza Hut Malaysia\'s digital platforms.',
+          'By improving interaction consistency, navigation clarity, and usability across touchpoints, the experience became more cohesive throughout the ecosystem while creating a stronger foundation for future scalability.',
+          'The project highlighted how <span class="highlight">collaborative systems thinking</span> and product design can create more unified experiences across large-scale omnichannel environments.',
         ],
       },
       {
         type: 'images',
-        layout: 'full',
-        big: phShipped,
+        layout: 'stacked',
+        images: [phShipped, phNext],
       },
       {
         type: 'text',
-        heading: 'What\'s next',
-        paragraphs: [],
-        bullets: [
-          'Roadmap items are quarterly rollouts (e.g., loyalty revamp, coupon redemption, vouchers, etc.). I explicitly scoped these for next phases to protect the Apr 2026 ship date and avoid destabilising localisation + checkout.',
-          'Phase 1 estimated to be launched May 2026. Post-launch metric tracking is instrumented — conversion results against targets to be updated.',
-        ],
-      },
-      {
-        type: 'images',
-        layout: 'full',
-        big: phNext,
-      },
-      {
-        type: 'text',
-        heading: 'Learnings',
-        paragraphs: [],
-        bullets: [
-          'If I were starting over, I\'d instrument localisation <strong>failure events in the prototype phase</strong> itself — we caught several edge cases late in QC that earlier telemetry would have surfaced in weeks, not days before launch.',
-          'I\'d lock the <strong>prototype-approval step as a formal client sign-off</strong> gate earlier in the process. We used prototypes to validate direction internally, but getting explicit client sign-off on the prototype before Figma work began would have eliminated 2 rounds of late-stage structural feedback on flows we\'d already detailed.',
-          'Combo complexity was flagged in our research but I underestimated how much it would affect checkout reliability. I\'d make the <strong>combo-to-checkout flow a dedicated QA stream</strong> from sprint 1 — not something we stress-tested fully until the final phase.',
+        heading: 'Reflection',
+        paragraphs: [
+          'This project deepened my understanding of designing within large-scale omnichannel ecosystems where collaboration, systems thinking, operational understanding, and cross-platform consistency become just as important as visual design itself.',
+          'Working closely across multiple platforms and teams reinforced the importance of creating experiences that feel scalable, connected, and human across every interaction.',
+          'It also strengthened my perspective on how modern product ecosystems require balancing usability, operational workflows, business needs, and scalable systems together — not separately.',
         ],
       },
       {

@@ -12,29 +12,37 @@ export function initLetterReveal() {
     if (el.dataset.letterReveal) return
     el.dataset.letterReveal = 'true'
 
-    const original = el.textContent
-    if (!original.trim()) return
-
+    const hasBr = el.querySelector('br')
     const hasChildren = el.querySelector('img, svg, a')
     if (hasChildren) return
 
+    const decodeHTML = (str) => { const t = document.createElement('textarea'); t.innerHTML = str; return t.value }
+    const rawLines = hasBr ? el.innerHTML.split(/<br\s*\/?>/i) : [el.textContent]
+    const lines = rawLines.map(l => decodeHTML(l))
+    if (!lines.join('').trim()) return
+
     el.innerHTML = ''
-    const words = original.split(' ')
-    words.forEach((word, wi) => {
-      const wordSpan = document.createElement('span')
-      wordSpan.className = 'lr-word'
-      word.split('').forEach((char) => {
-        const letterSpan = document.createElement('span')
-        letterSpan.className = 'lr-letter'
-        letterSpan.textContent = char
-        wordSpan.appendChild(letterSpan)
+    lines.forEach((line, li) => {
+      const words = line.trim().split(' ')
+      words.forEach((word, wi) => {
+        const wordSpan = document.createElement('span')
+        wordSpan.className = 'lr-word'
+        word.split('').forEach((char) => {
+          const letterSpan = document.createElement('span')
+          letterSpan.className = 'lr-letter'
+          letterSpan.textContent = char
+          wordSpan.appendChild(letterSpan)
+        })
+        el.appendChild(wordSpan)
+        if (wi < words.length - 1) {
+          const space = document.createElement('span')
+          space.className = 'lr-letter'
+          space.innerHTML = '&nbsp;'
+          el.appendChild(space)
+        }
       })
-      el.appendChild(wordSpan)
-      if (wi < words.length - 1) {
-        const space = document.createElement('span')
-        space.className = 'lr-letter'
-        space.innerHTML = '&nbsp;'
-        el.appendChild(space)
+      if (li < lines.length - 1) {
+        el.appendChild(document.createElement('br'))
       }
     })
 

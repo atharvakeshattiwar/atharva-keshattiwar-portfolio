@@ -39,7 +39,7 @@ export default function Partners() {
           <div ref={leftRef} className="partners-left animate-fade-in">
             <div className="parters-hedline">
               <div className="section-headline-text">
-                20+ Products & Platforms
+                {'20+ Products &'}<br />{'Platforms'}
               </div>
             </div>
             <div className="text-sm text-color-black-800">

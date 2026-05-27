@@ -1,24 +1,20 @@
 import { useEffect, useRef, forwardRef, useImperativeHandle } from 'react'
 import { gsap } from 'gsap'
-import t1 from '../assets/trail/t1.jpg'
-import t2 from '../assets/trail/t2.jpg'
-import t3 from '../assets/trail/t3.jpg'
-import t4 from '../assets/trail/t4.jpg'
-import t5 from '../assets/trail/t5.jpg'
-import t6 from '../assets/trail/t6.jpg'
-import t7 from '../assets/trail/t7.jpg'
-import t8 from '../assets/trail/t8.jpg'
-import t9 from '../assets/trail/t9.jpg'
-import t10 from '../assets/trail/t10.jpg'
-import t11 from '../assets/trail/t11.jpg'
-import t12 from '../assets/trail/t12.jpg'
-import t13 from '../assets/trail/t13.jpg'
-import t14 from '../assets/trail/t14.jpg'
-import t15 from '../assets/trail/t15.jpg'
-import t16 from '../assets/trail/t16.jpg'
-import t17 from '../assets/trail/t17.jpg'
+import t1 from '../assets/carousel-ref/Landscape_01.png'
+import t2 from '../assets/carousel-ref/Landscape_02.png'
+import t3 from '../assets/carousel-ref/Landscape_03.png'
+import t4 from '../assets/carousel-ref/Landscape_04.png'
+import t5 from '../assets/carousel-ref/Landscape_05.png'
+import t6 from '../assets/carousel-ref/Landscape_06.png'
+import t7 from '../assets/carousel-ref/Landscape_07.png'
+import t8 from '../assets/carousel-ref/Landscape_08.png'
+import t9 from '../assets/carousel-ref/Landscape_09.png'
+import t10 from '../assets/carousel-ref/Landscape_10.png'
+import t11 from '../assets/carousel-ref/Landscape_11.png'
+import t12 from '../assets/carousel-ref/Landscape_12.png'
+import t13 from '../assets/carousel-ref/Landscape_13.png'
 
-const trailImages = [t3, t10, t1, t14, t6, t17, t4, t11, t8, t15, t2, t9, t16, t5, t12, t7, t13]
+const trailImages = [t7, t11, t1, t9, t5, t13, t2, t8, t12, t4, t10, t6]
 
 const CONFIG = {
   maxImages: 10,

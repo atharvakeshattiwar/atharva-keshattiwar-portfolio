@@ -62,7 +62,7 @@ export default function ThomasHero() {
             }}
           >
             <div className="th-card-texts">
-              <span>Product Designer</span>
+              <span>Sr. Product Designer</span>
               <span>Visual Storyteller</span>
             </div>
             <div className="th-card-image">

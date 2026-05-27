@@ -31,8 +31,8 @@ export default function ClientsCollab() {
   return (
     <section className="cc-section">
       <div className="cc-wrapper">
-        <div className="section-headline-text text-align-center">
-          Latest clients and<br />collaborations
+        <div className="section-headline-text text-align-center cc-heading">
+          {'Latest clients and'}<br />{'collaborations'}
         </div>
         <div className="cc-brand-area">
           <MarqueeRow images={row1} direction="left" />
