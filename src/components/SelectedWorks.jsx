@@ -1,4 +1,5 @@
 import { useEffect, useRef } from 'react'
+import { Link } from 'react-router-dom'
 import img1 from '../assets/works/pizza-hut-mockup.png'
 import img2 from '../assets/works/novus-mockup.png'
 import img3 from '../assets/works/swapeasy-mockup.png'
@@ -7,13 +8,15 @@ import img5 from '../assets/works/monvera.avif'
 import img6 from '../assets/works/graphora.png'
 
 const projects = [
-  { title: 'Pizza Hut Malaysia', image: img1, tags: ['Foodtech', 'Ordering', 'Commerce'], status: 'soon' },
-  { title: 'Novus Design System', image: img2, tags: ['Design System', 'Scalable UI', 'Infrastructure'], externalLink: 'https://www.figma.com/deck/MExPN6YiryGBbMiY3XFy5i/Novus-Design-System?node-id=1-47265', status: 'live' },
-  { title: 'SwapEasy', image: img3, tags: ['B2B SaaS', 'Recommerce', 'Enterprise UX'], status: 'soon' },
-  { title: 'Dr. Pashu', image: img4, tags: ['Healthcare', 'SaaS', 'Consultation Platform'], status: 'soon' },
+  { title: 'Pizza Hut Malaysia', image: img1, tags: ['Foodtech', 'Ordering', 'Commerce'], slug: 'pizza-hut-malaysia' },
+  { title: 'Novus Design System', image: img2, tags: ['Design System', 'Scalable UI', 'Infrastructure'], slug: 'novus-design-system' },
+  { title: 'SwapEasy', image: img3, tags: ['B2B SaaS', 'Recommerce', 'Enterprise UX'], slug: 'swapeasy', comingSoon: true },
+  { title: 'Dr. Pashu', image: img4, tags: ['Healthcare', 'SaaS', 'Consultation Platform'], slug: 'dr-pashu', comingSoon: true },
+  // { title: 'Nexus Malls', image: img5, tags: ['E-commerce', 'RetailTech', 'Mobile Experience'] },
+  // { title: 'Fynd Express', image: img6, tags: ['AI', 'Website Builder', 'Commerce'] },
 ]
 
-function WorkCard({ title, image, tags, externalLink, status }) {
+function WorkCard({ title, image, tags, slug, externalLink, comingSoon }) {
   const ref = useRef(null)
 
   useEffect(() => {
@@ -29,11 +32,7 @@ function WorkCard({ title, image, tags, externalLink, status }) {
     <>
       <div className="sw-card-img">
         <img src={image} alt={title} loading="lazy" />
-        {status && (
-          <span className={`sw-status-bubble sw-status-${status}`}>
-            {status === 'live' ? 'Live' : 'Coming Soon'}
-          </span>
-        )}
+        {comingSoon && <span className="sw-coming-soon">Coming Soon</span>}
       </div>
       <div className="sw-card-info">
         <div className="sw-card-title">{title}</div>
@@ -49,6 +48,14 @@ function WorkCard({ title, image, tags, externalLink, status }) {
     </>
   )
 
+  if (comingSoon) {
+    return (
+      <div ref={ref} className="sw-card sw-animate sw-card-locked">
+        {content}
+      </div>
+    )
+  }
+
   if (externalLink) {
     return (
       <a ref={ref} href={externalLink} target="_blank" rel="noopener noreferrer" className="sw-card sw-animate">
@@ -58,9 +65,9 @@ function WorkCard({ title, image, tags, externalLink, status }) {
   }
 
   return (
-    <div ref={ref} className="sw-card sw-card-nolink sw-animate">
+    <Link ref={ref} to={`/project/${slug}`} className="sw-card sw-animate">
       {content}
-    </div>
+    </Link>
   )
 }
 

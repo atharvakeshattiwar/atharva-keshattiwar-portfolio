@@ -1,4 +1,5 @@
 import { useEffect, useRef } from 'react'
+import { Link } from 'react-router-dom'
 import img1 from '../assets/works/pizza-hut-mockup.png'
 import img2 from '../assets/works/novus-mockup.png'
 import img3 from '../assets/works/swapeasy-mockup.png'
@@ -8,13 +9,15 @@ import img6 from '../assets/works/graphora.png'
 import Footer from '../components/Footer'
 
 const projects = [
-  { title: 'Pizza Hut Malaysia', image: img1, tags: ['Foodtech', 'Ordering', 'Commerce'], status: 'soon' },
-  { title: 'Novus Design System', image: img2, tags: ['Design System', 'Scalable UI', 'Infrastructure'], externalLink: 'https://www.figma.com/deck/MExPN6YiryGBbMiY3XFy5i/Novus-Design-System?node-id=1-47265', status: 'live' },
-  { title: 'SwapEasy', image: img3, tags: ['B2B SaaS', 'Recommerce', 'Enterprise UX'], status: 'soon' },
-  { title: 'Dr. Pashu', image: img4, tags: ['Healthcare', 'SaaS', 'Consultation Platform'], status: 'soon' },
+  { title: 'Pizza Hut Malaysia', image: img1, tags: ['Foodtech', 'Ordering', 'Commerce'], slug: 'pizza-hut-malaysia' },
+  { title: 'Novus Design System', image: img2, tags: ['Design System', 'Scalable UI', 'Infrastructure'], slug: 'novus-design-system' },
+  { title: 'SwapEasy', image: img3, tags: ['B2B SaaS', 'Recommerce', 'Enterprise UX'], slug: 'swapeasy', comingSoon: true },
+  { title: 'Dr. Pashu', image: img4, tags: ['Healthcare', 'SaaS', 'Consultation Platform'], slug: 'dr-pashu', comingSoon: true },
+  // { title: 'Nexus Malls', image: img5, tags: ['E-commerce', 'RetailTech', 'Mobile Experience'] },
+  // { title: 'Fynd Express', image: img6, tags: ['AI', 'Website Builder', 'Commerce'] },
 ]
 
-function WorkCard({ title, image, tags, externalLink, status }) {
+function WorkCard({ title, image, tags, slug, externalLink, comingSoon }) {
   const ref = useRef(null)
 
   useEffect(() => {
@@ -30,11 +33,7 @@ function WorkCard({ title, image, tags, externalLink, status }) {
     <>
       <div className="sw-card-img">
         <img src={image} alt={title} loading="lazy" />
-        {status && (
-          <span className={`sw-status-bubble sw-status-${status}`}>
-            {status === 'live' ? 'Live' : 'Coming Soon'}
-          </span>
-        )}
+        {comingSoon && <span className="sw-coming-soon">Coming Soon</span>}
       </div>
       <div className="sw-card-info">
         <div className="sw-card-title">{title}</div>
@@ -50,6 +49,14 @@ function WorkCard({ title, image, tags, externalLink, status }) {
     </>
   )
 
+  if (comingSoon) {
+    return (
+      <div ref={ref} className="sw-card sw-animate sw-card-locked">
+        {content}
+      </div>
+    )
+  }
+
   if (externalLink) {
     return (
       <a ref={ref} href={externalLink} target="_blank" rel="noopener noreferrer" className="sw-card sw-animate">
@@ -59,9 +66,9 @@ function WorkCard({ title, image, tags, externalLink, status }) {
   }
 
   return (
-    <div ref={ref} className="sw-card sw-card-nolink sw-animate">
+    <Link ref={ref} to={`/project/${slug}`} className="sw-card sw-animate">
       {content}
-    </div>
+    </Link>
   )
 }
 
@@ -69,12 +76,14 @@ export default function Projects() {
   const headlineRef = useRef(null)
   const hrRef = useRef(null)
   const infoRef = useRef(null)
+  const introRef = useRef(null)
 
   useEffect(() => {
     const elements = [
       { ref: headlineRef, delay: 0 },
       { ref: hrRef, delay: 200 },
       { ref: infoRef, delay: 400 },
+      { ref: introRef, delay: 600 },
     ]
     elements.forEach(({ ref, delay }) => {
       if (ref.current) {
@@ -100,6 +109,12 @@ export default function Projects() {
                 <div className="text-sm text-color-black-900">Crafting since 2020</div>
                 <div className="text-sm text-color-black-900">Designing at scale today</div>
               </div>
+              {/* <div ref={introRef} className="proj-intro animate-fade-in">
+                <h3 className="heading-h3 home-hero">
+                  <span className="blank-text projects">_________________</span>
+                  [Explore a curated collection of my most impactful projects, showcasing creativity, strategy, and attention to detail]
+                </h3>
+              </div> */}
             </div>
             <div className="proj-bottom">
               <div className="sw-grid">
