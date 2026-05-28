@@ -396,17 +396,11 @@ export default function CaseStudyNovus() {
         <section className="csv2-next">
           <p className="csv2-next-label">Next Project</p>
           <h3 className="csv2-next-title">SwapEasy</h3>
-          <Link to="/project/swapeasy" className="primary-button-block-black">
+          <div className="primary-button-block-black" style={{ cursor: 'default', opacity: 0.6 }}>
             <div className="primary-button-wrapper-black">
-              <div className="primary-button-text-black">View project</div>
-              <div className="primary-button-arrow-block-black">
-                <div className="primary-button-slider-black">
-                  <div className="button-arrow-white"><svg width="16" height="16" viewBox="0 0 16 16" fill="none"><path d="M10.7813 7.33312L7.20534 3.75712L8.14801 2.81445L13.3333 7.99979L8.14801 13.1851L7.20534 12.2425L10.7813 8.66645H2.66663V7.33312H10.7813Z" fill="currentColor" /></svg></div>
-                  <div className="button-arrow-white"><svg width="16" height="16" viewBox="0 0 16 16" fill="none"><path d="M10.7813 7.33312L7.20534 3.75712L8.14801 2.81445L13.3333 7.99979L8.14801 13.1851L7.20534 12.2425L10.7813 8.66645H2.66663V7.33312H10.7813Z" fill="currentColor" /></svg></div>
-                </div>
-              </div>
+              <div className="primary-button-text-black">Coming Soon</div>
             </div>
-          </Link>
+          </div>
         </section>
       </Reveal>
 
