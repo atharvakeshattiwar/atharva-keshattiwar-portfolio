@@ -29,7 +29,7 @@ export default function Results() {
             Results
           </div>
           <div className="res-subtext">
-            Designing scalable digital experiences across AI, commerce, SaaS, and omnichannel ecosystems — focused on building products that create real user and business impact.
+            Designing scalable digital experiences across AI, commerce, SaaS, and omnichannel ecosystems, focused on building products that create real user and business impact.
           </div>
         </div>
         <div ref={blocksRef} className="res-content animate-fade-in">

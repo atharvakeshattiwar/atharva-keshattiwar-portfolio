@@ -37,7 +37,7 @@ export default function ScrollStatement() {
             <img src={portrait} alt="Atharva Keshattiwar" className="stmt-portrait" />
           </div>
           <p ref={textRef} className="stmt-text">
-            My journey started with cameras, visuals, and storytelling — long before product design. Today, I design digital experiences the same way I capture photographs: through observation, emotion, rhythm, and human connection.
+            My journey started with cameras, visuals, and storytelling, long before product design. Today, I design digital experiences the same way I capture photographs: through observation, emotion, rhythm, and human connection.
           </p>
         </div>
       </div>

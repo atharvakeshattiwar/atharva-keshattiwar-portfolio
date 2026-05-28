@@ -22,7 +22,7 @@ const SECTIONS = [
 
 const TAGS = [
   { label: 'Shipped', filled: true },
-  { label: '2022 — Present' },
+  { label: '2022 – Present' },
   { label: 'Product Designer' },
   { label: 'Design Systems · SaaS' },
   { label: '20+ Products' },
@@ -168,7 +168,7 @@ export default function CaseStudyNovus() {
         <div className="csv2-hero-inner">
           <Reveal><p className="csv2-label">Case study · Design Systems</p></Reveal>
           <h1 className="csv2-title section-headline-text">Building a unified design system for 20+ products.</h1>
-          <Reveal delay={0.2}><p className="csv2-subtitle">As part of the Fynd design team, I helped build Novus — a scalable design system powering 20+ products across Fynd and Jio. From components and patterns to documentation and real-world adoption.</p></Reveal>
+          <Reveal delay={0.2}><p className="csv2-subtitle">As part of the Fynd design team, I helped build Novus, a scalable design system powering 20+ products across Fynd and Jio. From components and patterns to documentation and real-world adoption.</p></Reveal>
           <Reveal delay={0.3}>
             <div className="csv2-tags">
               {TAGS.map((t, i) => (
@@ -204,7 +204,7 @@ export default function CaseStudyNovus() {
 
       <div className="csv2-divider" />
 
-      {/* Stats — Sticky Notes */}
+      {/* Stats - Sticky Notes */}
       <section className="csv2-stats-section">
         <Reveal><p className="csv2-section-label csv2-stats-eyebrow">Designed for scale</p></Reveal>
         <div className="csv2-sticky-grid">
@@ -232,8 +232,8 @@ export default function CaseStudyNovus() {
           <section id="n-background" className="csv2-section">
             <Reveal><p className="csv2-section-label">Background</p></Reveal>
             <Reveal delay={0.05}><h2 className="csv2-heading">Fynd grew fast. The design didn't keep up.</h2></Reveal>
-            <Reveal><p className="csv2-para">Fynd, backed by Reliance Jio, evolved from a fashion e-commerce platform into a <span className="highlight">multi-product enterprise ecosystem</span> — building large-scale SaaS, e-commerce, and AI-powered platforms for businesses and consumers.</p></Reveal>
-            <Reveal><p className="csv2-para">To support this diverse ecosystem, we needed a unified design system that could empower 20+ products across Fynd and Jio — providing a consistent visual language, reusable components, and a robust foundation.</p></Reveal>
+            <Reveal><p className="csv2-para">Fynd, backed by Reliance Jio, evolved from a fashion e-commerce platform into a <span className="highlight">multi-product enterprise ecosystem</span>, building large-scale SaaS, e-commerce, and AI-powered platforms for businesses and consumers.</p></Reveal>
+            <Reveal><p className="csv2-para">To support this diverse ecosystem, we needed a unified design system that could empower 20+ products across Fynd and Jio, providing a consistent visual language, reusable components, and a robust foundation.</p></Reveal>
 
             <Reveal>
               <div className="csv2-insight-row">
@@ -263,7 +263,7 @@ export default function CaseStudyNovus() {
               </div>
             </Reveal>
 
-            <Reveal><p className="csv2-para">The <span className="highlight">fragmented brand identity</span> wasn't just a design problem — it was an operational bottleneck affecting velocity across every product team.</p></Reveal>
+            <Reveal><p className="csv2-para">The <span className="highlight">fragmented brand identity</span> wasn't just a design problem. It was an operational bottleneck affecting velocity across every product team.</p></Reveal>
             <PullQuote>When every product looks different, the brand loses its voice.</PullQuote>
             <ScrollImage src={nConvergence} />
           </section>
@@ -272,7 +272,7 @@ export default function CaseStudyNovus() {
           <section id="n-solution" className="csv2-section">
             <Reveal><p className="csv2-section-label">Solution</p></Reveal>
             <Reveal delay={0.05}><h2 className="csv2-heading">One system to replace them all.</h2></Reveal>
-            <Reveal><p className="csv2-para">We replaced fragmented approaches — including the old Jio Design System — with <span className="highlight">Novus</span>, a single cohesive foundation. Modern, scalable, and composable, allowing us to maintain a uniform design language while adapting to the needs of different platforms.</p></Reveal>
+            <Reveal><p className="csv2-para">We replaced fragmented approaches, including the old Jio Design System, with <span className="highlight">Novus</span>, a single cohesive foundation. Modern, scalable, and composable, allowing us to maintain a uniform design language while adapting to the needs of different platforms.</p></Reveal>
 
             <Reveal>
               <div className="csv2-steps">
@@ -294,7 +294,7 @@ export default function CaseStudyNovus() {
             <Reveal><p className="csv2-section-label">My Contribution</p></Reveal>
             <Reveal delay={0.05}><h2 className="csv2-heading">I didn't just use the system. I helped build it.</h2></Reveal>
             <Reveal><p className="csv2-para">As part of the design team, I actively <span className="highlight">designed and tested components</span> directly in Fynd products, ensuring real-world usability and consistency across different use cases.</p></Reveal>
-            <Reveal><p className="csv2-para">Beyond individual components, I created reusable patterns that help teams build faster and more cohesively — and developed detailed documentation to guide adoption and maintain quality.</p></Reveal>
+            <Reveal><p className="csv2-para">Beyond individual components, I created reusable patterns that help teams build faster and more cohesively, and developed detailed documentation to guide adoption and maintain quality.</p></Reveal>
 
             <Reveal>
               <div className="csv2-metric-strip">
@@ -311,8 +311,8 @@ export default function CaseStudyNovus() {
           <section id="n-swapeasy" className="csv2-section">
             <Reveal><p className="csv2-section-label">SwapEasy Redesign</p></Reveal>
             <Reveal delay={0.05}><h2 className="csv2-heading">Proving the system by rebuilding an entire product.</h2></Reveal>
-            <Reveal><p className="csv2-para">While working on SwapEasy, we saw an opportunity to showcase the true potential of Novus. Using the design system, we <span className="highlight">revamped the entire platform</span> — ensuring a more consistent, intuitive, and scalable design language.</p></Reveal>
-            <Reveal><p className="csv2-para">We focused on solving key UX challenges, simplifying workflows, and making interactions smoother — demonstrating how a unified system can strengthen both product vision and user trust.</p></Reveal>
+            <Reveal><p className="csv2-para">While working on SwapEasy, we saw an opportunity to showcase the true potential of Novus. Using the design system, we <span className="highlight">revamped the entire platform</span>, ensuring a more consistent, intuitive, and scalable design language.</p></Reveal>
+            <Reveal><p className="csv2-para">We focused on solving key UX challenges, simplifying workflows, and making interactions smoother, demonstrating how a unified system can strengthen both product vision and user trust.</p></Reveal>
             <PullQuote>A design system proves its value when it makes an entire product better.</PullQuote>
           </section>
 
@@ -320,7 +320,7 @@ export default function CaseStudyNovus() {
           <section id="n-workflow" className="csv2-section">
             <Reveal><p className="csv2-section-label">Workflow Pattern</p></Reveal>
             <Reveal delay={0.05}><h2 className="csv2-heading">One pattern. Five products. Zero inconsistency.</h2></Reveal>
-            <Reveal><p className="csv2-para">Multiple Fynd products needed a robust workflow builder and rule engine. I was assigned to <span className="highlight">craft an end-to-end pattern</span> for this need — studying industry leaders like Zapier, Retool, Tray.io, and Slack.</p></Reveal>
+            <Reveal><p className="csv2-para">Multiple Fynd products needed a robust workflow builder and rule engine. I was assigned to <span className="highlight">craft an end-to-end pattern</span> for this need, studying industry leaders like Zapier, Retool, Tray.io, and Slack.</p></Reveal>
 
             <Reveal>
               <div className="csv2-callout-strip">
@@ -342,7 +342,7 @@ export default function CaseStudyNovus() {
             <Reveal><p className="csv2-section-label">Documentation</p></Reveal>
             <Reveal delay={0.05}><h2 className="csv2-heading">If it's not documented, it doesn't exist.</h2></Reveal>
             <Reveal><p className="csv2-para">I contributed to documenting multiple components to ensure clarity and ease of use for both designers and developers. The goal was to create <span className="highlight">consistent, accessible documentation</span> published on our live design system site as a single source of truth.</p></Reveal>
-            <Reveal><p className="csv2-para">I closely worked with lead designers to align on standards, structure, and tone — helping us move fast while maintaining consistency and quality.</p></Reveal>
+            <Reveal><p className="csv2-para">I closely worked with lead designers to align on standards, structure, and tone, helping us move fast while maintaining consistency and quality.</p></Reveal>
 
             <Reveal>
               <div className="csv2-insight-row">
@@ -383,8 +383,8 @@ export default function CaseStudyNovus() {
           <section id="n-reflection" className="csv2-section">
             <Reveal><p className="csv2-section-label">Reflection</p></Reveal>
             <Reveal delay={0.05}><h2 className="csv2-heading">Design systems are culture, not just components.</h2></Reveal>
-            <Reveal><p className="csv2-para">Working on Novus taught me that a design system isn't a library of components — it's a <span className="highlight">shared agreement on how to build products</span>. The hardest part wasn't designing components. It was getting 20+ teams to think the same way.</p></Reveal>
-            <Reveal><p className="csv2-para">Being part of a team that built something used by thousands of designers and engineers across Fynd and Jio reinforced that the best systems are built through trust, iteration, and real-world validation — not perfection.</p></Reveal>
+            <Reveal><p className="csv2-para">Working on Novus taught me that a design system isn't a library of components. It's a <span className="highlight">shared agreement on how to build products</span>. The hardest part wasn't designing components. It was getting 20+ teams to think the same way.</p></Reveal>
+            <Reveal><p className="csv2-para">Being part of a team that built something used by thousands of designers and engineers across Fynd and Jio reinforced that the best systems are built through trust, iteration, and real-world validation, not perfection.</p></Reveal>
             <PullQuote>The best design system is the one teams actually want to use.</PullQuote>
           </section>
 

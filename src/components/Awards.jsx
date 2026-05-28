@@ -46,7 +46,7 @@ export default function Awards() {
           <div className="aw-left">
             <div ref={h1} className="section-headline-text text-align-center animate-fade-in">Awards</div>
             <div ref={h2} className="text-sm text-align-center text-color-black-800 animate-fade-in">
-              Recognized for taking full ownership of design outcomes and continuously pushing for growth — these awards reflect my commitment to delivering impact-driven work across products and teams.
+              Recognized for taking full ownership of design outcomes and continuously pushing for growth. These awards reflect my commitment to delivering impact-driven work across products and teams.
             </div>
           </div>
           <div className="aw-right">

@@ -169,7 +169,7 @@ export default function MonofHero() {
                 </div>
               </div>
 
-              {/* Circle dividers — below the top grid */}
+              {/* Circle dividers - below the top grid */}
               <div className="monof-divider-row">
                 <div className="monof-circle-divider" />
                 <div className="monof-circle-divider" />

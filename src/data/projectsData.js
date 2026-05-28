@@ -132,7 +132,7 @@ const projectsData = {
         type: 'text',
         heading: 'Omnichannel Ecosystem',
         paragraphs: [
-          'The project extended far beyond a single platform. Every touchpoint — from mobile ordering and kiosk interactions to tablet and web systems — needed to feel connected as part of one unified experience ecosystem.',
+          'The project extended far beyond a single platform. Every touchpoint, from mobile ordering and kiosk interactions to tablet and web systems, needed to feel connected as part of one unified experience ecosystem.',
           'Design decisions across platforms were approached collaboratively to ensure users experienced familiarity throughout their journey regardless of device or environment.',
           'This ecosystem-first approach helped create smoother customer experiences while supporting scalability across Pizza Hut Malaysia\'s growing digital platforms.',
         ],
@@ -167,7 +167,7 @@ const projectsData = {
         paragraphs: [
           'This project deepened my understanding of designing within large-scale omnichannel ecosystems where collaboration, systems thinking, operational understanding, and cross-platform consistency become just as important as visual design itself.',
           'Working closely across multiple platforms and teams reinforced the importance of creating experiences that feel scalable, connected, and human across every interaction.',
-          'It also strengthened my perspective on how modern product ecosystems require balancing usability, operational workflows, business needs, and scalable systems together — not separately.',
+          'It also strengthened my perspective on how modern product ecosystems require balancing usability, operational workflows, business needs, and scalable systems together, not separately.',
         ],
       },
       {
@@ -177,7 +177,7 @@ const projectsData = {
       },
       {
         type: 'testimonial',
-        quote: 'This work became the foundation for Pizza Hut Malaysia\'s omnichannel transformation program — uniting app, web, and self-checkout into one consistent ordering system.',
+        quote: 'This work became the foundation for Pizza Hut Malaysia\'s omnichannel transformation program, uniting app, web, and self-checkout into one consistent ordering system.',
         author: 'Izuan Izham',
         role: 'Digital Head, Pizza Hut Malaysia',
         avatar: phAvatar,
@@ -216,7 +216,7 @@ const projectsData = {
       {
         heading: 'Solutions',
         paragraphs: [
-          'Created a token-based design system with a comprehensive component library covering typography, color, spacing, and interactive patterns — all documented and versioned.',
+          'Created a token-based design system with a comprehensive component library covering typography, color, spacing, and interactive patterns, all documented and versioned.',
           'Established a contribution workflow and governance model that enabled multiple teams to adopt and extend the system while maintaining consistency.',
         ],
       },
@@ -240,7 +240,7 @@ const projectsData = {
       heading: 'Overview',
       paragraphs: [
         'Designed the core product experience for SwapEasy, a B2B SaaS platform enabling businesses to manage, price, and resell pre-owned inventory at scale.',
-        'The focus was on creating intuitive workflows for bulk device processing, automated grading, and marketplace integration — turning a complex enterprise operation into a streamlined, user-friendly experience.',
+        'The focus was on creating intuitive workflows for bulk device processing, automated grading, and marketplace integration, turning a complex enterprise operation into a streamlined, user-friendly experience.',
       ],
     },
     images: {
@@ -251,7 +251,7 @@ const projectsData = {
       {
         heading: 'Problems',
         paragraphs: [
-          'The existing recommerce workflow was manual and fragmented — operators had to juggle spreadsheets, separate grading tools, and disconnected marketplaces to process pre-owned devices.',
+          'The existing recommerce workflow was manual and fragmented. Operators had to juggle spreadsheets, separate grading tools, and disconnected marketplaces to process pre-owned devices.',
           'Lack of standardized grading criteria and pricing models led to inconsistent valuations, eroding trust with both sellers and buyers.',
         ],
       },
@@ -300,7 +300,7 @@ const projectsData = {
       {
         heading: 'Solutions',
         paragraphs: [
-          'Designed a purpose-built consultation flow with pet profiles, symptom selectors, and photo/video upload — enabling vets to diagnose remotely with rich context.',
+          'Designed a purpose-built consultation flow with pet profiles, symptom selectors, and photo/video upload, enabling vets to diagnose remotely with rich context.',
           'Created a trust-building experience with verified doctor profiles, transparent pricing, ratings, and post-consultation care plans with medication reminders.',
         ],
       },

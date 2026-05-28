@@ -30,7 +30,7 @@ const SECTIONS = [
 
 const TAGS = [
   { label: 'Shipped', filled: true },
-  { label: '2024 — 2025' },
+  { label: '2024 – 2025' },
   { label: 'Product Designer' },
   { label: 'Omnichannel · QSR' },
   { label: 'Mobile · Web · SSD Device' },
@@ -39,7 +39,7 @@ const TAGS = [
 const TLDR = [
   { category: 'Background', text: 'A large-scale QSR ordering ecosystem serving ~4.9M customers across mobile, web, SSD device, and tablet touchpoints.' },
   { category: 'Problem', text: 'Fragmented platform experiences with inconsistent navigation, ordering flows, and interaction logic across touchpoints.' },
-  { category: 'Approach', text: 'As part of the PHM design team — led mobile design decisions while maintaining ecosystem-wide consistency.' },
+  { category: 'Approach', text: 'As part of the PHM design team, led mobile design decisions while maintaining ecosystem-wide consistency.' },
   { category: 'Outcome', text: 'A connected, scalable ordering ecosystem with unified interaction patterns across all digital platforms.' },
 ]
 
@@ -194,7 +194,7 @@ export default function CaseStudyV2() {
         <div className="csv2-hero-inner">
           <Reveal><p className="csv2-label">Case study · Omnichannel Commerce</p></Reveal>
           <h1 className="csv2-title section-headline-text">Redesigning Pizza Hut Malaysia's omnichannel ordering ecosystem.</h1>
-          <Reveal delay={0.2}><p className="csv2-subtitle">As part of the PHM design team, I helped redesign Pizza Hut Malaysia's digital ordering ecosystem across mobile, web, tablet, and SSD device experiences — leading mobile design decisions while working across the broader omnichannel system.</p></Reveal>
+          <Reveal delay={0.2}><p className="csv2-subtitle">As part of the PHM design team, I helped redesign Pizza Hut Malaysia's digital ordering ecosystem across mobile, web, tablet, and SSD device experiences, leading mobile design decisions while working across the broader omnichannel system.</p></Reveal>
           <Reveal delay={0.3}>
             <div className="csv2-tags">
               {TAGS.map((t, i) => (
@@ -231,7 +231,7 @@ export default function CaseStudyV2() {
 
       <div className="csv2-divider" />
 
-      {/* Stats — Sticky Notes */}
+      {/* Stats - Sticky Notes */}
       <section className="csv2-stats-section">
         <Reveal><p className="csv2-section-label csv2-stats-eyebrow">Designed for scale</p></Reveal>
         <div className="csv2-sticky-grid">
@@ -271,7 +271,7 @@ export default function CaseStudyV2() {
           <section id="background" className="csv2-section">
             <Reveal><p className="csv2-section-label">Background</p></Reveal>
             <Reveal delay={0.05}><h2 className="csv2-heading">Customers didn't think in platforms. They thought in journeys.</h2></Reveal>
-            <Reveal delay={0.1}><p className="csv2-para">Pizza Hut Malaysia's ordering ecosystem had grown across mobile, web, SSD device, and tablet over time — each platform solving immediate business needs independently. But the broader ecosystem lacked a <span className="highlight">shared experience system</span>, and customers felt the inconsistency every time they switched devices.</p></Reveal>
+            <Reveal delay={0.1}><p className="csv2-para">Pizza Hut Malaysia's ordering ecosystem had grown across mobile, web, SSD device, and tablet over time, with each platform solving immediate business needs independently. But the broader ecosystem lacked a <span className="highlight">shared experience system</span>, and customers felt the inconsistency every time they switched devices.</p></Reveal>
 
             <Reveal delay={0.15}>
               <div className="csv2-insight-row">
@@ -281,7 +281,7 @@ export default function CaseStudyV2() {
               </div>
             </Reveal>
 
-            <Reveal><p className="csv2-para">The opportunity wasn't to redesign individual interfaces — it was to create one connected ordering journey that could scale across every platform while feeling familiar at every touchpoint.</p></Reveal>
+            <Reveal><p className="csv2-para">The opportunity wasn't to redesign individual interfaces. It was to create one connected ordering journey that could scale across every platform while feeling familiar at every touchpoint.</p></Reveal>
             <PullQuote>Customers didn't care which platform they were on. They cared that the experience worked.</PullQuote>
             <div className="csv2-img-block">
               <Reveal>
@@ -298,20 +298,20 @@ export default function CaseStudyV2() {
             <Reveal delay={0.05}><h2 className="csv2-heading">The cracks were small, but they were everywhere.</h2></Reveal>
 
             <BeforeAfter
-              before="Four platforms, each with its own navigation logic, interaction patterns, and ordering flows — built independently, maintained separately."
+              before="Four platforms, each with its own navigation logic, interaction patterns, and ordering flows, built independently and maintained separately."
               after="Customers moved between devices expecting continuity, but experienced friction, confusion, and broken familiarity."
             />
 
-            <Reveal><p className="csv2-para">This wasn't a visual design problem. It was an <span className="highlight">ecosystem architecture problem</span> — creating scalable experience logic that could unify platforms without breaking what already worked on each one.</p></Reveal>
-            <PullQuote>The challenge wasn't redesigning screens — it was creating familiarity across every touchpoint.</PullQuote>
+            <Reveal><p className="csv2-para">This wasn't a visual design problem. It was an <span className="highlight">ecosystem architecture problem</span>: creating scalable experience logic that could unify platforms without breaking what already worked on each one.</p></Reveal>
+            <PullQuote>The challenge wasn't redesigning screens. It was creating familiarity across every touchpoint.</PullQuote>
             <ScrollImage src={phProblem} />
           </section>
 
           {/* Discovery */}
           <section id="discovery" className="csv2-section">
             <Reveal><p className="csv2-section-label">Discovery</p></Reveal>
-            <Reveal delay={0.05}><h2 className="csv2-heading">Understanding how the ecosystem actually worked — not just how it looked.</h2></Reveal>
-            <Reveal><p className="csv2-para">As part of the PHM design team, we mapped how customers actually moved through the ecosystem — not how we assumed they did. Understanding operational workflows, store-level constraints, and real ordering patterns revealed where fragmentation created the most friction.</p></Reveal>
+            <Reveal delay={0.05}><h2 className="csv2-heading">Understanding how the ecosystem actually worked, not just how it looked.</h2></Reveal>
+            <Reveal><p className="csv2-para">As part of the PHM design team, we mapped how customers actually moved through the ecosystem, not how we assumed they did. Understanding operational workflows, store-level constraints, and real ordering patterns revealed where fragmentation created the most friction.</p></Reveal>
 
             <Reveal>
               <div className="csv2-callout-strip">
@@ -321,7 +321,7 @@ export default function CaseStudyV2() {
               </div>
             </Reveal>
 
-            <Reveal><p className="csv2-para">Working within a 3-designer team — each owning a platform perspective — allowed us to continuously challenge assumptions and influence the broader ecosystem together.</p></Reveal>
+            <Reveal><p className="csv2-para">Working within a 3-designer team, each owning a platform perspective, allowed us to continuously challenge assumptions and influence the broader ecosystem together.</p></Reveal>
             <PullQuote>The best ecosystem decisions came from understanding what happened behind the screens, not just on them.</PullQuote>
             <ScrollImage src={phPitch} />
             <div className="csv2-img-block">
@@ -337,7 +337,7 @@ export default function CaseStudyV2() {
           <section id="strategy" className="csv2-section">
             <Reveal><p className="csv2-section-label">Strategy</p></Reveal>
             <Reveal delay={0.05}><h2 className="csv2-heading">Align the system, not just the screens.</h2></Reveal>
-            <Reveal><p className="csv2-para">The approach wasn't about making screens look the same — it was about making the <span className="highlight">ecosystem behave the same</span>. Shared interaction logic, unified navigation patterns, and consistent ordering flows across every touchpoint.</p></Reveal>
+            <Reveal><p className="csv2-para">The approach wasn't about making screens look the same. It was about making the <span className="highlight">ecosystem behave the same</span>. Shared interaction logic, unified navigation patterns, and consistent ordering flows across every touchpoint.</p></Reveal>
 
             <Reveal>
               <div className="csv2-steps">
@@ -358,7 +358,7 @@ export default function CaseStudyV2() {
           <section id="mobile" className="csv2-section">
             <Reveal><p className="csv2-section-label">Mobile</p></Reveal>
             <Reveal delay={0.05}><h2 className="csv2-heading">Mobile became the behavioral foundation of the ecosystem.</h2></Reveal>
-            <Reveal><p className="csv2-para">Within the PHM design team, I <span className="highlight">owned mobile experience decisions</span> — from interaction patterns and ordering flows to navigation systems and visual hierarchy. Mobile was where most customers started their journey, and every decision here rippled across the ecosystem.</p></Reveal>
+            <Reveal><p className="csv2-para">Within the PHM design team, I <span className="highlight">owned mobile experience decisions</span>, from interaction patterns and ordering flows to navigation systems and visual hierarchy. Mobile was where most customers started their journey, and every decision here rippled across the ecosystem.</p></Reveal>
 
             <Reveal>
               <div className="csv2-metric-strip">
@@ -368,7 +368,7 @@ export default function CaseStudyV2() {
               </div>
             </Reveal>
 
-            <Reveal><p className="csv2-para">Every mobile interaction was designed with the broader ecosystem in mind — working closely with the web, SSD device, and tablet teams to ensure behavioral consistency across platforms.</p></Reveal>
+            <Reveal><p className="csv2-para">Every mobile interaction was designed with the broader ecosystem in mind, working closely with the web, SSD device, and tablet teams to ensure behavioral consistency across platforms.</p></Reveal>
             <ScrollImage src={landscape11} />
           </section>
 
@@ -376,7 +376,7 @@ export default function CaseStudyV2() {
           <section id="system" className="csv2-section">
             <Reveal><p className="csv2-section-label">System</p></Reveal>
             <Reveal delay={0.05}><h2 className="csv2-heading">Reusable patterns. Unified behaviors. One system.</h2></Reveal>
-            <Reveal><p className="csv2-para">Scaling consistency across four platforms required more than shared colors and typography. It required <span className="highlight">shared behavior</span> — unified interaction logic, predictable navigation, and components that worked the same everywhere.</p></Reveal>
+            <Reveal><p className="csv2-para">Scaling consistency across four platforms required more than shared colors and typography. It required <span className="highlight">shared behavior</span>: unified interaction logic, predictable navigation, and components that worked the same everywhere.</p></Reveal>
 
             <Reveal>
               <div className="csv2-ba">
@@ -399,7 +399,7 @@ export default function CaseStudyV2() {
           <section id="ecosystem" className="csv2-section">
             <Reveal><p className="csv2-section-label">Ecosystem</p></Reveal>
             <Reveal delay={0.05}><h2 className="csv2-heading">Every touchpoint needed to feel like one product.</h2></Reveal>
-            <Reveal><p className="csv2-para">A customer might browse on web, order on mobile, and pick up via SSD device — all in the same session. The ecosystem needed to maintain <span className="highlight">continuity across every transition</span>, not just within each platform.</p></Reveal>
+            <Reveal><p className="csv2-para">A customer might browse on web, order on mobile, and pick up via SSD device, all in the same session. The ecosystem needed to maintain <span className="highlight">continuity across every transition</span>, not just within each platform.</p></Reveal>
 
             <Reveal>
               <div className="csv2-insight-row">
@@ -424,7 +424,7 @@ export default function CaseStudyV2() {
           <section id="outcome" className="csv2-section">
             <Reveal><p className="csv2-section-label">Outcome</p></Reveal>
             <Reveal delay={0.05}><h2 className="csv2-heading">Fragmented experiences became one connected system.</h2></Reveal>
-            <Reveal><p className="csv2-para">The redesigned ecosystem established <span className="highlight">unified interaction patterns, consistent navigation logic, and scalable ordering flows</span> across all customer touchpoints — creating a foundation that could evolve with the business.</p></Reveal>
+            <Reveal><p className="csv2-para">The redesigned ecosystem established <span className="highlight">unified interaction patterns, consistent navigation logic, and scalable ordering flows</span> across all customer touchpoints, creating a foundation that could evolve with the business.</p></Reveal>
 
             <Reveal>
               <div className="csv2-outcome-grid">
@@ -443,7 +443,7 @@ export default function CaseStudyV2() {
             <Reveal><p className="csv2-section-label">Reflection</p></Reveal>
             <Reveal delay={0.05}><h2 className="csv2-heading">Systems thinking matters more than pixel perfection.</h2></Reveal>
             <Reveal><p className="csv2-para">This project changed how I think about design. Not as screen-level decisions, but as <span className="highlight">ecosystem-level behavior</span>. Understanding how operations, customer journeys, and platform constraints connect taught me more about product thinking than any individual interface ever could.</p></Reveal>
-            <Reveal><p className="csv2-para">Being part of a team that cared about getting the system right — not just the screens — reinforced that the best digital experiences are built through shared ownership, not individual effort.</p></Reveal>
+            <Reveal><p className="csv2-para">Being part of a team that cared about getting the system right, not just the screens, reinforced that the best digital experiences are built through shared ownership, not individual effort.</p></Reveal>
             <PullQuote>The best ecosystems aren't designed screen by screen. They're designed decision by decision.</PullQuote>
             <ScrollImage src={phLearnings} />
           </section>

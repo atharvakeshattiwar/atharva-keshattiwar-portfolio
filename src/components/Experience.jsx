@@ -1,9 +1,9 @@
 import { useEffect, useRef } from 'react'
 
 const experiences = [
-  { role: 'Sr. Product Designer', company: 'Fynd (Reliance Jio)', period: 'Oct 2022 — Present' },
-  { role: 'Design Lead', company: 'Dr Pashu — ML Brains', period: 'Nov 2021 — Oct 2022' },
-  { role: 'Visual Designer', company: 'A Buzz Company', period: 'Nov 2020 — Sep 2022' },
+  { role: 'Sr. Product Designer', company: 'Fynd (Reliance Jio)', period: 'Oct 2022 – Present' },
+  { role: 'Design Lead', company: 'Dr Pashu, ML Brains', period: 'Nov 2021 – Oct 2022' },
+  { role: 'Visual Designer', company: 'A Buzz Company', period: 'Nov 2020 – Sep 2022' },
 ]
 
 function ExperienceCard({ role, company, period }) {
@@ -54,7 +54,7 @@ export default function Experience() {
               <div className="section-headline-text">Working Experience</div>
             </div>
             <div ref={subtextRef} className="text-sm text-color-black-800 animate-fade-in">
-              A journey across product ecosystems — building scalable systems, simplifying complex workflows, and crafting meaningful digital experiences across SaaS, AI, E-commerce, and omnichannel platforms.
+              A journey across product ecosystems: building scalable systems, simplifying complex workflows, and crafting meaningful digital experiences across SaaS, AI, E-commerce, and omnichannel platforms.
             </div>
           </div>
           <div className="exp-right">
