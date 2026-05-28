@@ -7,7 +7,10 @@ const ArrowIcon = () => (
   </svg>
 )
 
+const COMING_SOON_SLUGS = ['swapeasy', 'dr-pashu']
+
 export default function NextProject({ title, slug }) {
+  const isComingSoon = COMING_SOON_SLUGS.includes(slug)
   const ref = useRef(null)
 
   useEffect(() => {
@@ -30,17 +33,25 @@ export default function NextProject({ title, slug }) {
     <section ref={ref} className="cs-next-project animate-fade-in">
       <div className="cs-next-label">Next Project</div>
       <h3 className="cs-next-title">{title}</h3>
-      <Link to={`/project/${slug}`} className="primary-button-block-black">
-        <div className="primary-button-wrapper-black">
-          <div className="primary-button-text-black">View project</div>
-          <div className="primary-button-arrow-block-black">
-            <div className="primary-button-slider-black">
-              <div className="button-arrow-white"><ArrowIcon /></div>
-              <div className="button-arrow-white"><ArrowIcon /></div>
-            </div>
+      {isComingSoon ? (
+        <div className="primary-button-block-black" style={{ cursor: 'default', opacity: 0.6 }}>
+          <div className="primary-button-wrapper-black">
+            <div className="primary-button-text-black">Coming Soon</div>
           </div>
         </div>
-      </Link>
+      ) : (
+        <Link to={`/project/${slug}`} className="primary-button-block-black">
+          <div className="primary-button-wrapper-black">
+            <div className="primary-button-text-black">View project</div>
+            <div className="primary-button-arrow-block-black">
+              <div className="primary-button-slider-black">
+                <div className="button-arrow-white"><ArrowIcon /></div>
+                <div className="button-arrow-white"><ArrowIcon /></div>
+              </div>
+            </div>
+          </div>
+        </Link>
+      )}
     </section>
   )
 }
