@@ -140,7 +140,7 @@ export default function Footer() {
               </div>
               <div className="footer-right">
                 <a href="mailto:atharvakeshattiwar@gmail.com" target="_blank" rel="noopener noreferrer" className="footer-headline-link">
-                  <div className="section-headline-text">atharvakeshattiwar @gmail.com<img src={footerArrow} alt="" className="footer-arrow-inline" /></div>
+                  <div className="section-headline-text">atharvakeshattiwar<span className="footer-email-break"> </span>@gmail.com<img src={footerArrow} alt="" className="footer-arrow-inline" /></div>
                 </a>
                 <div className="footer-links-grid">
                   {pageLinks.map((link) => (

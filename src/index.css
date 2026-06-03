@@ -1425,6 +1425,10 @@ a {
   flex-shrink: 0;
 }
 
+.footer-email-break {
+  display: inline;
+}
+
 .footer-arrow-inline {
   width: 3.5vw;
   max-width: 3rem;
@@ -7010,11 +7014,12 @@ a {
 
   .sin-card {
     height: 230px;
-    padding: 16px;
+    padding: 24px;
   }
 
   .sin-connect-block {
-    padding: 16px;
+    padding: 24px;
+    gap: 20px;
   }
 
   .sin-heading {
@@ -7164,7 +7169,7 @@ a {
     font-size: 10vw;
     line-height: 100%;
     letter-spacing: -0.5vw;
-    margin-top: 8px;
+    margin-top: -8px;
   }
 
   .intro-text-line {
@@ -7391,7 +7396,7 @@ a {
   :root {
     --global-wrapper: 100%;
     --global-padding: 0.75rem;
-    --global-margin: 4rem;
+    --global-margin: 3.125rem;
   }
 
   .heading-h3 {
@@ -7599,14 +7604,10 @@ a {
   }
 
   .th-paragraph {
-    display: none;
-  }
-
-  .th-mobile-layout {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    gap: 0;
+    font-size: 22px;
+    line-height: 30px;
+    letter-spacing: -1px;
+    margin-top: 78px;
   }
 
   .th-heading {
@@ -7864,6 +7865,13 @@ a {
     letter-spacing: -1.2px;
   }
 
+  /* Section spacing */
+  .sw-section,
+  .sin-section,
+  .section-partners {
+    padding-top: 20px;
+  }
+
   /* Success Numbers */
   .sin-grid {
     grid-template-columns: 1fr;
@@ -7879,10 +7887,12 @@ a {
   .sin-card {
     height: auto;
     min-height: 200px;
+    padding: 24px;
   }
 
   .sin-connect-block {
-    padding: 16px;
+    padding: 24px;
+    gap: 20px;
   }
 
   /* Clients Collab */
@@ -8042,7 +8052,7 @@ a {
 @media screen and (max-width: 479px) {
   :root {
     --global-padding: 0.5rem;
-    --global-margin: 3.5rem;
+    --global-margin: 3.125rem;
   }
 
   .heading-h3 {
@@ -8145,12 +8155,12 @@ a {
   }
 
   .sw-headline {
-    font-size: 2.25rem;
-    letter-spacing: -1.5px;
+    font-size: 2.5rem;
+    letter-spacing: -2px;
   }
 
   .sw-subtext {
-    font-size: 0.8125rem;
+    font-size: 0.875rem;
   }
 
   .sw-top {
@@ -8434,8 +8444,18 @@ a {
 
 
   .sin-number {
-    font-size: 24px;
-    line-height: 32px;
+    font-size: 28px;
+    line-height: 36px;
+  }
+
+  .sin-label {
+    font-size: 15px;
+    margin-top: 4px;
+  }
+
+  .sin-desc {
+    max-width: 100%;
+    margin-top: 10px;
   }
 
   .sin-connect-title {
@@ -8445,7 +8465,25 @@ a {
 
   /* Partners */
   .partners-logo {
-    max-width: 60%;
+    max-width: 85%;
+  }
+
+  .partners-logo-div._1 .partners-logo,
+  .partners-logo-div._2 .partners-logo,
+  .partners-logo-div._3 .partners-logo {
+    height: 48px;
+  }
+
+  .partners-logo-div._4 .partners-logo {
+    height: 80px;
+  }
+
+  .partners-logo-div._5 .partners-logo {
+    height: 29px;
+  }
+
+  .partners-logo-div._6 .partners-logo {
+    height: 80px;
   }
 
   /* Reviews */
@@ -8475,8 +8513,23 @@ a {
     text-align: center;
   }
 
+  .footer-email-break {
+    display: block;
+    font-size: 0;
+    line-height: 0;
+  }
+
+  .footer-headline-link .section-headline-text {
+    font-size: 1.75rem;
+    line-height: 1.3;
+    letter-spacing: -1px;
+  }
+
   .footer-arrow-inline {
-    width: 2rem;
+    width: 1rem;
+    min-width: 1rem;
+    margin-left: 4px;
+    vertical-align: middle;
   }
 
   /* Section headline */
@@ -8513,6 +8566,7 @@ a {
 
   .acar-section {
     padding: 30px 0 50px;
+    margin-bottom: var(--global-margin);
   }
 
   /* Hero Video */
