@@ -1,6 +1,6 @@
 import heroImg1 from '../assets/works/designova.avif'
 import heroImg2 from '../assets/works/brandflux.avif'
-import heroImg3 from '../assets/works/creativox.avif'
+import heroImg3 from '../assets/works/project-placeholder.avif'
 import heroImg4 from '../assets/works/webion.avif'
 import heroImg5 from '../assets/works/monvera.avif'
 import heroImg6 from '../assets/works/graphora.png'

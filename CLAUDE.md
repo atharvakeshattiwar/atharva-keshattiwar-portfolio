@@ -6,23 +6,6 @@
 - All custom CSS in `src/index.css` (~5000 lines)
 - No CMS — content lives in `src/data/projectsData.js`
 
-## Reference Sites
-
-This portfolio is built by cherry-picking the best sections from multiple proven Webflow designs. Always check the original reference for exact behavior (animations, scroll effects, responsive breakpoints, transitions). Never simplify or skip effects from the reference.
-
-| Site | Used For |
-|---|---|
-| **https://miller-s.webflow.io** | Primary reference — overall layout, navbar, footer, selected works, project detail pages (`/project/creativox`) |
-| **https://lucas-margaret.webflow.io** | Scroll hero section, some layout patterns |
-| **https://thomas-henry.webflow.io** | Thomas hero section, intro text styles |
-
-### Content Source
-| Site | Used For |
-|---|---|
-| **https://rushabhk.com/work/pizzahutmalaysia** | Pizza Hut case study content + images (scraped to `/tmp/pizzahut-assets/`) |
-
-Extract exact computed styles from reference sites using Playwright before building any section.
-
 ## Design Tokens (CSS Variables)
 
 ```css
@@ -62,7 +45,7 @@ Every section MUST include styles for all 4 breakpoints in a single pass:
 | Mobile Landscape | max-width: 767px | 100% | 12px | Grids become 2-col, smaller gaps |
 | Mobile Portrait | max-width: 479px | 100% | 8px | Stacked layouts, tighter spacing |
 
-## Typography (from reference)
+## Typography
 
 | Element | Font | Size | Weight | Line-Height | Letter-Spacing | Color |
 |---|---|---|---|---|---|---|
@@ -82,7 +65,7 @@ section.{prefix}-section
     div.{prefix}-content        (inner flex/grid container)
 ```
 
-## Case Study Page Layout (from reference: miller-s.webflow.io/project/*)
+## Case Study Page Layout
 
 Page structure top to bottom:
 1. **CaseStudyHero** — title (hero-headline-text centered) + hr line + 4 info columns + full-width hero image
@@ -92,7 +75,7 @@ Page structure top to bottom:
 5. **Image block** — same pattern as #3
 6. **Footer**
 
-### Case Study CSS Values (extracted from reference)
+### Case Study CSS Values
 
 **Project main wrapper:**
 - max-width: 1240px, padding: 0 20px, margin: 0 auto
@@ -161,8 +144,7 @@ Triggered via IntersectionObserver or staggered setTimeout on mount.
 ## Rules
 
 1. **Responsive-first:** Never write desktop-only CSS. Write base + all 3 media queries together.
-2. **Reference-match:** Extract exact values from miller-s.webflow.io using Playwright before coding.
-3. **Verify visually:** Take screenshots at all 4 viewports and compare against reference before done.
+2. **Verify visually:** Take screenshots at all 4 viewports and compare before done.
 4. **Section-by-section:** Build one section at a time. Confirm with user before moving to next.
 5. **No flex margin collapse traps:** Flex containers don't collapse margins — never double up margin-bottom on parent + last child.
 6. **CSS location:** Add responsive rules inside the existing media query blocks at lines ~3648 (991px), ~4012 (767px), ~4498 (479px). Don't create new media query blocks.

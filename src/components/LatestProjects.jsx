@@ -3,7 +3,7 @@ import { gsap } from 'gsap'
 import { ScrollTrigger } from 'gsap/ScrollTrigger'
 import img1 from '../assets/works/designova.avif'
 import img2 from '../assets/works/brandflux.avif'
-import img3 from '../assets/works/creativox.avif'
+import img3 from '../assets/works/project-placeholder.avif'
 import img4 from '../assets/works/webion.avif'
 
 gsap.registerPlugin(ScrollTrigger)
