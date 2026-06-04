@@ -6252,6 +6252,17 @@ a {
   }
 }
 
+/* ===== LETTER REVEAL ===== */
+
+.lr-word {
+  display: inline-block;
+  white-space: nowrap;
+}
+
+.lr-letter {
+  display: inline-block;
+}
+
 /* ===== ROVANO HERO ===== */
 
 .rovano-main {
