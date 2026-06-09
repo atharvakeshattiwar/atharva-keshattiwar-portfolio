@@ -1,6 +1,7 @@
 import { useEffect, useState, useRef } from 'react'
 import { Link } from 'react-router-dom'
 import Footer from '../components/Footer'
+import { trackScrollDepth } from '../utils/analytics'
 import nCover from '../assets/case-studies/novus/01-cover.png'
 import nAnimation from '../assets/case-studies/novus/02-animation.gif'
 import nDivergence from '../assets/case-studies/novus/03-divergence.png'
@@ -159,6 +160,18 @@ export default function CaseStudyNovus() {
     )
     SECTIONS.forEach(s => { const el = document.getElementById(s.id); if (el) observer.observe(el) })
     return () => { observer.disconnect(); clearTimeout(timeout) }
+  }, [])
+
+  useEffect(() => {
+    const fired = new Set()
+    const handleScroll = () => {
+      const percent = Math.round((window.scrollY / (document.body.scrollHeight - window.innerHeight)) * 100)
+      ;[25, 50, 75, 100].forEach(d => {
+        if (percent >= d && !fired.has(d)) { fired.add(d); trackScrollDepth('novus-design-system', d) }
+      })
+    }
+    window.addEventListener('scroll', handleScroll, { passive: true })
+    return () => window.removeEventListener('scroll', handleScroll)
   }, [])
 
   return (

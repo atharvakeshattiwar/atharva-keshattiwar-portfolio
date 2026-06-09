@@ -1,5 +1,6 @@
 import { useEffect, useRef, useState } from 'react'
 import Footer from '../components/Footer'
+import { trackContactSubmit } from '../utils/analytics'
 
 export default function Contact() {
   const headlineRef = useRef(null)
@@ -36,6 +37,7 @@ export default function Contact() {
         mode: 'no-cors',
       })
       setSubmitted(true)
+      trackContactSubmit()
     } catch {
       setSubmitted(true)
     }

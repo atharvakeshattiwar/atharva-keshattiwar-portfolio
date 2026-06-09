@@ -1,6 +1,7 @@
 import { useEffect, useRef, useState } from 'react'
 import { Link, useLocation } from 'react-router-dom'
 import footerArrow from '../assets/footer-arrow.svg'
+import { trackResumeClick, trackEmailClick, trackSocialClick, trackCtaClick } from '../utils/analytics'
 
 const ArrowIcon = () => (
   <svg width="16" height="16" viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg">
@@ -58,16 +59,16 @@ function FooterLinkColumn({ title, links }) {
 }
 
 const socialLinks = [
-  'https://www.linkedin.com/in/atharva-keshattiwar-7940231b6/',
-  'https://www.instagram.com/atharva__ak10',
-  'https://x.com/Atharva_ak10',
+  { url: 'https://www.linkedin.com/in/atharva-keshattiwar-7940231b6/', name: 'linkedin' },
+  { url: 'https://www.instagram.com/atharva__ak10', name: 'instagram' },
+  { url: 'https://x.com/Atharva_ak10', name: 'x' },
 ]
 
 function SocialIcons({ className }) {
   return (
     <div className={`footer-social-icons ${className}`}>
       {socialIcons.map((icon, i) => (
-        <a key={i} href={socialLinks[i]} target="_blank" rel="noopener noreferrer" className="footer-social-icon-link">
+        <a key={i} href={socialLinks[i].url} target="_blank" rel="noopener noreferrer" className="footer-social-icon-link" onClick={() => trackSocialClick(socialLinks[i].name)}>
           <div className="footer-social-icon">{icon}</div>
         </a>
       ))}
@@ -124,7 +125,7 @@ export default function Footer() {
                   <div className="text-2xl text-weight-semibold text-color-black-900">
                     Have an Idea Worth Building?
                   </div>
-                  <a href="mailto:atharvakeshattiwar@gmail.com" target="_blank" rel="noopener noreferrer" className="primary-button-block-black">
+                  <a href="mailto:atharvakeshattiwar@gmail.com" target="_blank" rel="noopener noreferrer" className="primary-button-block-black" onClick={() => trackCtaClick('Start a Conversation')}>
                     <div className="primary-button-wrapper-black">
                       <div className="primary-button-text-black">Start a Conversation</div>
                       <div className="primary-button-arrow-block-black">
@@ -139,7 +140,7 @@ export default function Footer() {
                 <SocialIcons className="pc" />
               </div>
               <div className="footer-right">
-                <a href="mailto:atharvakeshattiwar@gmail.com" target="_blank" rel="noopener noreferrer" className="footer-headline-link">
+                <a href="mailto:atharvakeshattiwar@gmail.com" target="_blank" rel="noopener noreferrer" className="footer-headline-link" onClick={trackEmailClick}>
                   <div className="section-headline-text">atharvakeshattiwar<span className="footer-email-break"> </span>@gmail.com<img src={footerArrow} alt="" className="footer-arrow-inline" /></div>
                 </a>
                 <div className="footer-links-grid">

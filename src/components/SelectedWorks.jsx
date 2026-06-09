@@ -1,5 +1,6 @@
 import { useEffect, useRef } from 'react'
 import { Link } from 'react-router-dom'
+import { trackProjectClick } from '../utils/analytics'
 import img1 from '../assets/works/pizza-hut-mockup.png'
 import img2 from '../assets/works/novus-mockup.png'
 import img3 from '../assets/works/swapeasy-mockup.png'
@@ -65,7 +66,7 @@ function WorkCard({ title, image, tags, slug, externalLink, comingSoon }) {
   }
 
   return (
-    <Link ref={ref} to={`/project/${slug}`} className="sw-card sw-animate">
+    <Link ref={ref} to={`/project/${slug}`} className="sw-card sw-animate" onClick={() => trackProjectClick(title)}>
       {content}
     </Link>
   )

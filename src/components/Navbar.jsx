@@ -1,6 +1,7 @@
 import { useState, useEffect } from 'react'
 import { Link, useLocation } from 'react-router-dom'
 import logo from '../assets/logo.png'
+import { trackResumeClick } from '../utils/analytics'
 
 const navLinks = [
   { label: 'Home', href: '/' },
@@ -33,7 +34,7 @@ function ArrowIcon() {
 
 function ContactButton() {
   return (
-    <a href="https://drive.google.com/file/d/14NuBYP-jJ-Vnk0PNySxDHvLPtgvVJLPZ/view?usp=sharing" target="_blank" rel="noopener noreferrer" className="primary-button-block-black">
+    <a href="https://drive.google.com/file/d/14NuBYP-jJ-Vnk0PNySxDHvLPtgvVJLPZ/view?usp=sharing" target="_blank" rel="noopener noreferrer" className="primary-button-block-black" onClick={trackResumeClick}>
       <div className="primary-button-wrapper-black">
         <div className="primary-button-text-black">Resume</div>
         <div className="primary-button-arrow-block-black">

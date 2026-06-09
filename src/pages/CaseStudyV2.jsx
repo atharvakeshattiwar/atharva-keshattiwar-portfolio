@@ -1,6 +1,7 @@
 import { useEffect, useState, useRef } from 'react'
 import { Link } from 'react-router-dom'
 import Footer from '../components/Footer'
+import { trackScrollDepth } from '../utils/analytics'
 import phHero from '../assets/carousel-ref/Landscape_10.png'
 import phGlance from '../assets/case-studies/pizza-hut/02-at-a-glance.png'
 import phProblem from '../assets/case-studies/pizza-hut/03-problem-funnel.png'
@@ -185,6 +186,18 @@ export default function CaseStudyV2() {
     )
     SECTIONS.forEach(s => { const el = document.getElementById(s.id); if (el) observer.observe(el) })
     return () => { observer.disconnect(); clearTimeout(timeout) }
+  }, [])
+
+  useEffect(() => {
+    const fired = new Set()
+    const handleScroll = () => {
+      const percent = Math.round((window.scrollY / (document.body.scrollHeight - window.innerHeight)) * 100)
+      ;[25, 50, 75, 100].forEach(d => {
+        if (percent >= d && !fired.has(d)) { fired.add(d); trackScrollDepth('pizza-hut-malaysia', d) }
+      })
+    }
+    window.addEventListener('scroll', handleScroll, { passive: true })
+    return () => window.removeEventListener('scroll', handleScroll)
   }, [])
 
   return (
