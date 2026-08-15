@@ -2,7 +2,7 @@ import { useEffect, useRef } from 'react'
 import portrait from '../assets/thomas-hero.png'
 
 const stats = [
-  { value: '4+', label: 'Years of Experience' },
+  { value: '5+', label: 'Years of Experience' },
   { value: '30+', label: 'Projects Completed' },
   { value: '98%', label: 'Satisfied Clients' },
   { value: '8+', label: 'Industries Served' },
