@@ -13,12 +13,12 @@ export const RESPONSES = {
 
 export const KEYWORD_RESPONSES = {
   // Career & Experience
-  'experience': "4+ years of mass-producing pixels and fighting for white space. Started at A Buzz Company, led design at Dr. Pashu (yes, it's a vet app 🐄), and now at Fynd where I design for 13+ products. My Figma file count is... concerning.",
+  'experience': "5+ years of mass-producing pixels and fighting for white space. Started at A Buzz Company, led design at Dr. Pashu (yes, it's a vet app 🐄), and now at Fynd where I design for 13+ products. My Figma file count is... concerning.",
   'career': "Went from 'I'll just do some freelance graphics in college' to 'I'm designing AI products at Reliance Jio.' Life comes at you fast. 🚀",
   'background': "Plot twist: I have an engineering degree in Electronics & Telecom. Absolutely zero regrets about abandoning that path. Sorry, mom.",
   'journey': "Engineering student → freelance designer → full-time designer → product designer → now building with AI. My LinkedIn timeline is a wild ride.",
   'work history': "A Buzz Company → Dr. Pashu (Design Lead) → Fynd/Reliance Jio (Product Designer). Each job basically doubled the chaos and I loved every second.",
-  'years': "4+ years. Which in designer-years is like 47, because every stakeholder meeting ages you.",
+  'years': "5+ years. Which in designer-years is like 47, because every stakeholder meeting ages you.",
 
   // Current Role
   'fynd': "Fynd (Reliance Jio) since Oct 2022. I design across 13+ products: FieldForce, SwapEasy, Pizza Hut Malaysia, an AI website generator, and more. Yes, I sometimes forget which Figma file I'm in. No, I won't apologize.",
@@ -91,7 +91,7 @@ export const KEYWORD_RESPONSES = {
   'interest': "Design (obviously), AI, visual storytelling, photography, and arguing about whether dark mode is actually better. (It is. Fight me.)",
   'passion': "Making complicated things feel simple. Also, perfectly aligned grids. If that's not passion, I don't know what is.",
   'fun fact': "I have an engineering degree I've never used, I've designed an app for sick cows, and this chat you're using was built with AI. My life is a fun fact.",
-  'about': "I'm Atharva. I design products, shoot photography and video, argue about pixels, and talk to AI more than real humans. 4+ years of turning chaos into clean interfaces at Fynd. What do you wanna know?",
+  'about': "I'm Atharva. I design products, shoot photography and video, argue about pixels, and talk to AI more than real humans. 5+ years of turning chaos into clean interfaces at Fynd. What do you wanna know?",
 
   // AI & Tech
   'ai': "AI is my co-pilot (literally). Claude for coding, Cursor for dev, ChatGPT for brainstorming, Midjourney for 'what if it looked like THIS.' At Fynd, I designed an AI website generator and an AI chat tool. I'm basically training my replacement. 🤖",
@@ -153,7 +153,7 @@ export const KEYWORD_RESPONSES = {
   'haha': "I'm glad you're amused. My comedy career was always Plan C after engineering and design. Ask me something else! 😂",
 
   // Common question patterns people type
-  'tell me about you': "I'm Atharva. I design products, argue about pixels, and talk to AI more than real humans. 4+ years at it, currently at Fynd (Reliance Jio). What specifically do you wanna know?",
+  'tell me about you': "I'm Atharva. I design products, argue about pixels, and talk to AI more than real humans. 5+ years at it, currently at Fynd (Reliance Jio). What specifically do you wanna know?",
   'introduce': "I'm Atharva Keshattiwar! Product Designer, photographer, visual storyteller, accidental coder, and the architect of this slightly over-engineered portfolio. Nice to meet you! 👋",
   'what do you do': "I design digital products: apps, websites, design systems. Currently at Fynd (Reliance Jio) making 13+ products not terrible. It's a full-time job and then some.",
   'how old': "Old enough to have imposter syndrome, young enough to still care about hover animations. Let's leave it at that. 😄",
@@ -229,9 +229,9 @@ const CATEGORIES = {
 
 const CATEGORY_FALLBACKS = {
   career: [
-    "4+ years of designing things people actually use. Started freelancing, now at Fynd (Reliance Jio) designing for 13+ products. It's been a ride. What specifically about my career are you curious about? 🎢",
+    "5+ years of designing things people actually use. Started freelancing, now at Fynd (Reliance Jio) designing for 13+ products. It's been a ride. What specifically about my career are you curious about? 🎢",
     "Short version: engineer → freelancer → design lead → product designer at Reliance Jio. Long version: grab a coffee and ask me something specific!",
-    "I've been in the design game for 4+ years. Currently at Fynd making 13+ products look less ugly. Want details about a specific role?",
+    "I've been in the design game for 5+ years. Currently at Fynd making 13+ products look less ugly. Want details about a specific role?",
   ],
   skills: [
     "Figma, Adobe Suite, Framer, Webflow, React, and a growing army of AI tools. I'm basically a design Swiss Army knife. 🔪 What skill are you curious about?",

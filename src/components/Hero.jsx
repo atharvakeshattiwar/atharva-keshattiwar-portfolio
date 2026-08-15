@@ -66,7 +66,7 @@ export default function Hero() {
           <div ref={introRef} className="home-hero-intro animate-fade-in">
             <h3 className="heading-h3 home-hero">
               <span className="blank-text">_____________________</span>
-              [A product designer with 4+ years of experience, crafting intuitive digital products and capturing human emotion through my lens.]
+              [A product designer with 5+ years of experience, crafting intuitive digital products and capturing human emotion through my lens.]
             </h3>
           </div>
         </div>

@@ -1,7 +1,7 @@
 import { useEffect, useRef } from 'react'
 
 const stats = [
-  { number: '4+', label: 'Years of Experience', desc: 'Designing across SaaS, AI, and commerce products with a focus on building intuitive and scalable digital experiences.' },
+  { number: '5+', label: 'Years of Experience', desc: 'Designing across SaaS, AI, and commerce products with a focus on building intuitive and scalable digital experiences.' },
   { number: '20+', label: 'Projects Delivered', desc: 'Delivered product solutions across B2B platforms, marketplaces, and consumer applications with real-world usability and impact.' },
   { number: '5+', label: 'Domains Explored', desc: 'Worked across AI, SaaS, e-commerce, healthtech, and retailtech with adaptable design thinking across industries and user needs.' },
   { number: 'End-to-End', label: 'Product Ownership', desc: 'From problem discovery to shipped product, working across design, AI workflows, and frontend implementation.' },

@@ -20,7 +20,7 @@ const pageLinks = [
   { label: 'About', href: '/about-me' },
   { label: 'Projects', href: '/projects' },
   { label: 'Contact', href: '/contact' },
-  { label: 'Resume', href: 'https://drive.google.com/file/d/14NuBYP-jJ-Vnk0PNySxDHvLPtgvVJLPZ/view?usp=sharing' },
+  { label: 'Resume', href: 'https://drive.google.com/file/d/1FrO5v6MrrV-GUqZZrBvUNoxKGipgh4Wy/view?usp=sharing' },
 ]
 
 function FooterLink({ label, href }) {

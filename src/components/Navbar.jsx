@@ -34,7 +34,7 @@ function ArrowIcon() {
 
 function ContactButton() {
   return (
-    <a href="https://drive.google.com/file/d/14NuBYP-jJ-Vnk0PNySxDHvLPtgvVJLPZ/view?usp=sharing" target="_blank" rel="noopener noreferrer" className="primary-button-block-black" onClick={trackResumeClick}>
+    <a href="https://drive.google.com/file/d/1FrO5v6MrrV-GUqZZrBvUNoxKGipgh4Wy/view?usp=sharing" target="_blank" rel="noopener noreferrer" className="primary-button-block-black" onClick={trackResumeClick}>
       <div className="primary-button-wrapper-black">
         <div className="primary-button-text-black">Resume</div>
         <div className="primary-button-arrow-block-black">
